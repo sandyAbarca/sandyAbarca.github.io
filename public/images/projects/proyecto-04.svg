@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: packaging Dulce Origen">
+  <rect width="1200" height="900" fill="#f3d9c4"/>
+
+  <!-- caja con troquel -->
+  <g transform="translate(310 160)">
+    <rect width="560" height="560" rx="24" fill="#fffdf8" stroke="#211b15" stroke-width="5"/>
+    <path d="M0 24 V -60 M560 24 V -60" stroke="#211b15" stroke-width="5" fill="none"/>
+    <path d="M0 -60 H 280 L 0 90" fill="none" stroke="#211b15" stroke-width="5"/>
+    <path d="M560 -60 H 280 L 560 90" fill="none" stroke="#211b15" stroke-width="5"/>
+    <circle cx="280" cy="280" r="150" fill="#c14e2b"/>
+    <path d="M230 280 Q280 230 330 280 Q280 340 230 280" fill="#fffdf8"/>
+    <text x="280" y="500" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="52" fill="#211b15" text-anchor="middle">Dulce Origen</text>
+    <text x="280" y="532" font-family="Arial, sans-serif" font-size="16" letter-spacing="6" fill="#827666" text-anchor="middle">PASTELERÍA ARTESANAL</text>
+  </g>
+
+  <!-- listón -->
+  <rect x="0" y="435" width="1200" height="30" fill="#c98f2b"/>
+
+  <text x="1140" y="60" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#827666" text-anchor="end">IMG 04</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: identidad Sol de Maíz">
+  <rect width="1200" height="900" fill="#f2c94c"/>
+
+  <!-- sol -->
+  <g transform="translate(280 420)">
+    <circle r="170" fill="#211b15"/>
+    <g stroke="#211b15" stroke-width="22" stroke-linecap="round">
+      <path d="M0 -230 V -290"/>
+      <path d="M0 230 V 290"/>
+      <path d="M-230 0 H -290"/>
+      <path d="M230 0 H 290"/>
+      <path d="M-163 -163 L -205 -205"/>
+      <path d="M163 163 L 205 205"/>
+      <path d="M163 -163 L 205 -205"/>
+      <path d="M-163 163 L -205 205"/>
+    </g>
+    <circle r="70" fill="#f2c94c"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="620" y="400" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="110" fill="#211b15">Sol de Maíz</text>
+  <text x="622" y="472" font-family="Arial, sans-serif" font-size="24" letter-spacing="10" fill="#7a5c12">IDENTIDAD · 2025</text>
+  <rect x="622" y="498" width="170" height="7" fill="#c14e2b"/>
+
+  <!-- hoja de maíz -->
+  <path d="M860 640 Q960 560 1060 640 Q960 700 860 640 Z" fill="#6b8e5a" opacity="0.9"/>
+  <text x="1140" y="60" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#7a5c12" text-anchor="end">IMG 01</text>
+</svg>

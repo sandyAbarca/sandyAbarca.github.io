@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: revista Páginas">
+  <rect width="1200" height="900" fill="#f6f1e8"/>
+
+  <!-- columna editorial -->
+  <rect x="70" y="70" width="10" height="760" fill="#c14e2b"/>
+  <text x="110" y="150" font-family="Arial, sans-serif" font-size="24" letter-spacing="8" fill="#827666">Nº 04 — OTOÑO 2024</text>
+
+  <text x="110" y="430" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="600" font-size="200" fill="#211b15">Páginas</text>
+  <text x="115" y="510" font-family="Arial, sans-serif" font-size="26" letter-spacing="10" fill="#c14e2b">REVISTA CULTURAL INDEPENDIENTE</text>
+
+  <!-- columnas de texto -->
+  <g fill="#c9bda6">
+    <rect x="760" y="120" width="110" height="14" rx="7"/>
+    <rect x="760" y="150" width="110" height="14" rx="7"/>
+    <rect x="760" y="180" width="110" height="14" rx="7"/>
+    <rect x="760" y="210" width="80" height="14" rx="7"/>
+    <rect x="900" y="120" width="110" height="14" rx="7"/>
+    <rect x="900" y="150" width="110" height="14" rx="7"/>
+    <rect x="900" y="180" width="110" height="14" rx="7"/>
+    <rect x="900" y="210" width="95" height="14" rx="7"/>
+    <rect x="1040" y="120" width="90" height="14" rx="7"/>
+    <rect x="1040" y="150" width="90" height="14" rx="7"/>
+    <rect x="1040" y="180" width="90" height="14" rx="7"/>
+    <rect x="1040" y="210" width="60" height="14" rx="7"/>
+  </g>
+
+  <!-- foto -->
+  <rect x="760" y="300" width="370" height="420" fill="#2a211c"/>
+  <circle cx="945" cy="480" r="110" fill="#e9b98e"/>
+  <path d="M835 480 A110 110 0 0 1 1055 480 L1055 440 Q945 330 835 440 Z" fill="#4d443a"/>
+  <text x="760" y="760" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="40" fill="#f6f1e8">— la calle habla</text>
+
+  <text x="1140" y="850" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#827666" text-anchor="end">IMG 02</text>
+</svg>

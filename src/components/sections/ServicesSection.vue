@@ -25,9 +25,9 @@ import { services } from '../../data/services'
             <span class="num" aria-hidden="true">0{{ service.id }}</span>
 
             <span class="service-icon" aria-hidden="true">
-              <!-- Branding: pluma -->
+              <!-- Fotografía: cámara -->
               <svg
-                v-if="service.icon === 'branding'"
+                v-if="service.icon === 'fotografia'"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -37,15 +37,13 @@ import { services } from '../../data/services'
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                <path d="M2 2l7.586 7.586" />
-                <circle cx="11" cy="11" r="2" />
+                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                <circle cx="12" cy="13" r="3" />
               </svg>
 
-              <!-- Editorial: libro abierto -->
+              <!-- Producción: claqueta -->
               <svg
-                v-else-if="service.icon === 'editorial'"
+                v-else-if="service.icon === 'video'"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -55,13 +53,15 @@ import { services } from '../../data/services'
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
-                <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
+                <path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" />
+                <path d="m6.2 5.3 3.1 3.9" />
+                <path d="m12.4 3.4 3.1 4" />
+                <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
               </svg>
 
-              <!-- Ilustración: hoja -->
+              <!-- Edición: monitor con play y timeline -->
               <svg
-                v-else-if="service.icon === 'ilustracion'"
+                v-else-if="service.icon === 'edicion'"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -71,11 +71,13 @@ import { services } from '../../data/services'
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                <rect x="2" y="4" width="20" height="14" rx="2" />
+                <path d="m10 8 4 3-4 3Z" />
+                <path d="M6 21h4" />
+                <path d="M14 21h4" />
               </svg>
 
-              <!-- Redes: corazón de like -->
+              <!-- Dirección de arte: paleta -->
               <svg
                 v-else
                 width="24"
@@ -87,8 +89,12 @@ import { services } from '../../data/services'
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
+                <circle cx="13.5" cy="6.5" r="0.5" fill="currentColor" />
+                <circle cx="17.5" cy="10.5" r="0.5" fill="currentColor" />
+                <circle cx="8.5" cy="7.5" r="0.5" fill="currentColor" />
+                <circle cx="6.5" cy="12.5" r="0.5" fill="currentColor" />
                 <path
-                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"
                 />
               </svg>
             </span>

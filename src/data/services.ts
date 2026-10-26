@@ -1,4 +1,4 @@
-export type ServiceIcon = 'branding' | 'editorial' | 'ilustracion' | 'social'
+export type ServiceIcon = 'fotografia' | 'video' | 'edicion' | 'arte'
 
 export interface Service {
   id: number
@@ -14,34 +14,34 @@ export interface Service {
 export const services: Service[] = [
   {
     id: 1,
-    icon: 'branding',
-    title: 'Branding e Identidad',
+    icon: 'fotografia',
+    title: 'Fotografía',
     description:
-      'Logotipos, paletas de color y sistemas visuales completos que cuentan la historia de tu marca con coherencia.',
-    tags: ['Logotipo', 'Manual de marca', 'Papelería'],
+      'Retrato, moda y producto con luz natural. Sesiones que se sienten cercanas, reales y con mucha personalidad.',
+    tags: ['Retrato', 'Moda', 'Producto'],
   },
   {
     id: 2,
-    icon: 'editorial',
-    title: 'Diseño Editorial',
+    icon: 'video',
+    title: 'Producción Audiovisual',
     description:
-      'Revistas, libros y publicaciones con ritmo, jerarquía y amor por el detalle: de la retícula a la portada.',
-    tags: ['Revistas', 'Libros', 'Catálogos'],
+      'Video y cobertura de eventos: del storyboard al montaje final, con ritmo, emoción y buena música.',
+    tags: ['Coberturas', 'Video marca', 'Storyboard'],
   },
   {
     id: 3,
-    icon: 'ilustracion',
-    title: 'Ilustración',
+    icon: 'edicion',
+    title: 'Edición y Postproducción',
     description:
-      'Ilustraciones con personalidad para campañas, empaques y piezas editoriales, en estilo vectorial o a mano.',
-    tags: ['Digital', 'Vectorial', 'Botánica'],
+      'Edición de video, color y retoque fotográfico: el acabado que hace brillar cada toma.',
+    tags: ['Edición', 'Color', 'Retoque'],
   },
   {
     id: 4,
-    icon: 'social',
-    title: 'Redes Sociales',
+    icon: 'arte',
+    title: 'Dirección de Arte',
     description:
-      'Parrillas, banners y piezas que mantienen tu feed con una misma voz visual, clara y reconocible.',
-    tags: ['Feed', 'Banners', 'Campañas'],
+      'Concepto visual para sesiones y campañas: locaciones, props, iluminación y estética de principio a fin.',
+    tags: ['Campañas', 'Set', 'Look & feel'],
   },
 ]

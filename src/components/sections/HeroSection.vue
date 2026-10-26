@@ -5,12 +5,12 @@ import { img } from '../../utils/assets'
 import WaveDivider from '../layout/WaveDivider.vue'
 
 const marqueeItems = [
-  'Branding',
-  'Diseño editorial',
-  'Ilustración',
-  'Redes sociales',
-  'Packaging',
+  'Fotografía',
+  'Producción audiovisual',
+  'Edición y postproducción',
   'Dirección de arte',
+  'Retrato',
+  'Video marca',
 ]
 
 // Contenido duplicado para que la cinta se mueva sin cortes
@@ -19,6 +19,34 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
 
 <template>
   <section id="inicio" class="section section-hero">
+    <!-- Aperturas flotantes decorativas -->
+    <svg class="aperture-float a1" viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="currentColor">
+        <path d="M50 50 L86 44 L82 78 Z" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(45 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(90 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(135 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(180 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(225 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(270 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(315 50 50)" />
+      </g>
+      <circle cx="50" cy="50" r="14" fill="none" stroke="currentColor" stroke-width="4" />
+    </svg>
+    <svg class="aperture-float a2" viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="currentColor">
+        <path d="M50 50 L86 44 L82 78 Z" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(45 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(90 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(135 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(180 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(225 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(270 50 50)" />
+        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(315 50 50)" />
+      </g>
+      <circle cx="50" cy="50" r="14" fill="none" stroke="currentColor" stroke-width="4" />
+    </svg>
+
     <!-- Nubes a la deriva -->
     <div class="clouds" aria-hidden="true">
       <svg class="cloud c1" viewBox="0 0 200 70">
@@ -64,9 +92,10 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
             <span class="hand-note" aria-hidden="true">¡hola! soy Sandy ✳</span>
             <span class="tape" aria-hidden="true"></span>
             <div class="hero-frame">
+              <span class="corner-frame" aria-hidden="true"></span>
               <img
                 :src="img('images/portrait.svg')"
-                alt="Retrato de ejemplo de Sandy Abarca"
+                alt="Ilustración de Sandy Abarca, fotógrafa, tomando una foto en la playa"
                 width="800"
                 height="1000"
               />
@@ -77,6 +106,7 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
               </figcaption>
             </div>
 
+            <!-- Diafragma giratorio -->
             <div class="hero-stamp" aria-hidden="true">
               <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -84,30 +114,24 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
                     id="stamp-circle"
                     d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"
                   />
-                  <radialGradient id="sun-grad" cx="50%" cy="42%" r="72%">
-                    <stop offset="0%" stop-color="#ffd35c" />
-                    <stop offset="100%" stop-color="#ffac1e" />
-                  </radialGradient>
                 </defs>
-                <g fill="#78c0e6">
-                  <path d="M60 4 L67 24 L60 32 L53 24 Z" />
-                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(45 60 60)" />
-                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(90 60 60)" />
-                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(135 60 60)" />
-                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(180 60 60)" />
-                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(225 60 60)" />
-                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(270 60 60)" />
-                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(315 60 60)" />
+                <g fill="#ffac1e">
+                  <path d="M60 60 L86 44 L82 78 Z" />
+                  <path d="M60 60 L86 44 L82 78 Z" transform="rotate(45 60 60)" />
+                  <path d="M60 60 L86 44 L82 78 Z" transform="rotate(90 60 60)" />
+                  <path d="M60 60 L86 44 L82 78 Z" transform="rotate(135 60 60)" />
+                  <path d="M60 60 L86 44 L82 78 Z" transform="rotate(180 60 60)" />
+                  <path d="M60 60 L86 44 L82 78 Z" transform="rotate(225 60 60)" />
+                  <path d="M60 60 L86 44 L82 78 Z" transform="rotate(270 60 60)" />
+                  <path d="M60 60 L86 44 L82 78 Z" transform="rotate(315 60 60)" />
                 </g>
-                <circle cx="60" cy="60" r="40" fill="url(#sun-grad)" />
                 <circle
                   cx="60"
                   cy="60"
-                  r="31"
+                  r="17"
                   fill="none"
-                  stroke="rgba(15,60,101,.25)"
-                  stroke-width="1"
-                  stroke-dasharray="2 4"
+                  stroke="#0f3c65"
+                  stroke-width="4"
                 />
                 <text
                   font-family="Archivo, sans-serif"
@@ -116,12 +140,12 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
                   letter-spacing="1.6"
                   fill="#0f3c65"
                 >
-                  <textPath href="#stamp-circle" textLength="278">
-                    SOL ✳ MAR ✳ ARENA ✳ 2026
+                  <textPath href="#stamp-circle" textLength="276">
+                    FOTOGRAFÍA ✳ LUZ ✳ MAR ✳ 2026
                   </textPath>
                 </text>
                 <path
-                  d="M60 47 L62.5 55.5 L71 58 L62.5 60.5 L60 69 L57.5 60.5 L49 58 L57.5 55.5 Z"
+                  d="M60 42 L62 50 L70 52 L62 54 L60 62 L58 54 L50 52 L58 50 Z"
                   fill="#fff2bb"
                 />
               </svg>
@@ -131,7 +155,7 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
       </div>
     </div>
 
-    <!-- Línea de marea -->
+    <!-- Tira de película -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
         <span v-for="(item, i) in marqueeLoop" :key="i">{{ item }}</span>

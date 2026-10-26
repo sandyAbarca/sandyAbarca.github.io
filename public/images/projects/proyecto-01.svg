@@ -1,28 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: identidad Sol de Maíz">
-  <rect width="1200" height="900" fill="#78c0e6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: sesión de retrato en hora dorada">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffac1e"/>
+      <stop offset="0.55" stop-color="#ffe9bd"/>
+      <stop offset="1" stop-color="#fff2bb"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#sky)"/>
 
   <!-- sol -->
-  <g transform="translate(280 420)">
-    <circle r="170" fill="#ffac1e"/>
-    <g stroke="#0f3c65" stroke-width="22" stroke-linecap="round">
-      <path d="M0 -230 V -290"/>
-      <path d="M0 230 V 290"/>
-      <path d="M-230 0 H -290"/>
-      <path d="M230 0 H 290"/>
-      <path d="M-163 -163 L -205 -205"/>
-      <path d="M163 163 L 205 205"/>
-      <path d="M163 -163 L 205 -205"/>
-      <path d="M-163 163 L -205 205"/>
-    </g>
-    <circle r="70" fill="#fff2bb"/>
+  <circle cx="600" cy="470" r="150" fill="#fffce9" opacity="0.95"/>
+  <rect x="470" y="600" width="260" height="22" rx="11" fill="#fffce9" opacity="0.5"/>
+  <rect x="500" y="640" width="200" height="14" rx="7" fill="#fffce9" opacity="0.35"/>
+
+  <!-- mar -->
+  <rect x="0" y="590" width="1200" height="310" fill="#0f3c65"/>
+  <g stroke="#78c0e6" stroke-width="5" fill="none" opacity="0.7">
+    <path d="M0 640 Q150 620 300 640 T600 640 T900 640 T1200 640"/>
+    <path d="M0 690 Q150 670 300 690 T600 690 T900 690 T1200 690"/>
+    <path d="M0 740 Q150 720 300 740 T600 740 T900 740 T1200 740"/>
   </g>
 
-  <!-- wordmark -->
-  <text x="620" y="400" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="110" fill="#0f3c65">Sol de Maíz</text>
-  <text x="622" y="472" font-family="Arial, sans-serif" font-size="24" letter-spacing="10" fill="#0f3c65" opacity="0.8">IDENTIDAD · 2025</text>
-  <rect x="622" y="498" width="170" height="7" fill="#ffac1e"/>
+  <!-- fotógrafa en silueta -->
+  <g>
+    <circle cx="285" cy="400" r="50" fill="#102f4c"/>
+    <path d="M285 455 C235 455 215 525 195 600 L375 600 C355 525 335 455 285 455 Z" fill="#102f4c"/>
+    <rect x="232" y="440" width="106" height="74" rx="12" fill="#102f4c" stroke="#ffac1e" stroke-width="3"/>
+    <circle cx="285" cy="477" r="28" fill="#ffac1e"/>
+    <circle cx="285" cy="477" r="17" fill="#0f3c65"/>
+    <rect x="188" y="458" width="46" height="60" rx="20" fill="#102f4c" transform="rotate(-12 211 488)"/>
+    <rect x="336" y="458" width="46" height="60" rx="20" fill="#102f4c" transform="rotate(12 359 488)"/>
+  </g>
 
-  <!-- hoja de maíz -->
-  <path d="M860 640 Q960 560 1060 640 Q960 700 860 640 Z" fill="#4a9ccb" opacity="0.95"/>
-  <text x="1140" y="60" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#0f3c65" text-anchor="end">IMG 01</text>
+  <!-- huellas en la arena -->
+  <g stroke="#e6d183" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M420 830 Q520 815 620 830"/>
+    <path d="M720 855 Q820 840 920 855"/>
+  </g>
+
+  <!-- marco de foto -->
+  <rect x="34" y="34" width="1132" height="832" rx="10" fill="none" stroke="#fffce9" stroke-width="5"/>
+  <g stroke="#ffac1e" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M64 108 V 64 H 108"/>
+    <path d="M1092 64 H 1136 V 108"/>
+    <path d="M64 792 V 836 H 108"/>
+    <path d="M1092 836 H 1136 V 792"/>
+  </g>
+
+  <text x="100" y="125" font-family="Arial, sans-serif" font-weight="bold" font-size="42" letter-spacing="8" fill="#0f3c65">SESIÓN PLAYA DORADA</text>
+  <text x="102" y="158" font-family="Arial, sans-serif" font-size="21" letter-spacing="6" fill="#e8930a">HORA DORADA · RETRATO</text>
+
+  <text x="1130" y="800" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#0f3c65" text-anchor="end">IMG 01</text>
 </svg>

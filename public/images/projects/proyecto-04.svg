@@ -1,20 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: packaging Dulce Origen">
-  <rect width="1200" height="900" fill="#ffe9bd"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: fotografía de producto Café Norte">
+  <rect width="1200" height="900" fill="#fff2bb"/>
 
-  <!-- caja con troquel -->
-  <g transform="translate(310 160)">
-    <rect width="560" height="560" rx="24" fill="#fffce9" stroke="#0f3c65" stroke-width="5"/>
-    <path d="M0 24 V -60 M560 24 V -60" stroke="#0f3c65" stroke-width="5" fill="none"/>
-    <path d="M0 -60 H 280 L 0 90" fill="none" stroke="#0f3c65" stroke-width="5"/>
-    <path d="M560 -60 H 280 L 560 90" fill="none" stroke="#0f3c65" stroke-width="5"/>
-    <circle cx="280" cy="280" r="150" fill="#ffac1e"/>
-    <path d="M230 280 Q280 230 330 280 Q280 340 230 280" fill="#fffce9"/>
-    <text x="280" y="500" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="52" fill="#0f3c65" text-anchor="middle">Dulce Origen</text>
-    <text x="280" y="532" font-family="Arial, sans-serif" font-size="16" letter-spacing="6" fill="#5b7a99" text-anchor="middle">PASTELERÍA ARTESANAL</text>
+  <!-- sombra -->
+  <ellipse cx="600" cy="770" rx="300" ry="40" fill="#e6d183" opacity="0.6"/>
+
+  <!-- bolsa de café -->
+  <rect x="420" y="210" width="360" height="500" rx="30" fill="#0f3c65"/>
+  <rect x="420" y="210" width="360" height="70" rx="28" fill="#0b2c4a"/>
+  <circle cx="600" cy="430" r="110" fill="#ffac1e"/>
+  <circle cx="600" cy="430" r="84" fill="#fffce9"/>
+  <path d="M570 415 H630 V455 Q630 480 600 480 Q570 480 570 455 Z" fill="#0f3c65"/>
+  <g stroke="#78c0e6" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M585 395 Q578 383 585 371"/>
+    <path d="M615 395 Q608 383 615 371"/>
+  </g>
+  <text x="600" y="610" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="600" font-size="48" fill="#fff2bb" text-anchor="middle">Café Norte</text>
+  <text x="600" y="652" font-family="Arial, sans-serif" font-size="16" letter-spacing="6" fill="#78c0e6" text-anchor="middle">GRANO DE ALTURA</text>
+
+  <!-- taza -->
+  <path d="M870 430 H970 V470 Q970 500 920 500 Q870 500 870 470 Z" fill="#ffac1e"/>
+  <path d="M970 445 H1000 A26 26 0 0 1 970 485" fill="none" stroke="#ffac1e" stroke-width="12"/>
+  <rect x="855" y="500" width="130" height="14" rx="7" fill="#0f3c65"/>
+  <g stroke="#78c0e6" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M895 405 Q888 393 895 381"/>
+    <path d="M935 405 Q928 393 935 381"/>
   </g>
 
-  <!-- listón -->
-  <rect x="0" y="435" width="1200" height="30" fill="#78c0e6"/>
+  <!-- granos -->
+  <g fill="#0b2c4a">
+    <ellipse cx="170" cy="780" rx="22" ry="16" transform="rotate(-20 170 780)"/>
+    <ellipse cx="215" cy="800" rx="20" ry="15" transform="rotate(15 215 800)"/>
+    <ellipse cx="150" cy="815" rx="18" ry="14" transform="rotate(40 150 815)"/>
+  </g>
+  <g stroke="#fff2bb" stroke-width="3" fill="none">
+    <path d="M160 775 Q170 782 180 775"/>
+    <path d="M205 795 Q215 802 225 795"/>
+    <path d="M142 810 Q150 817 158 810"/>
+  </g>
 
-  <text x="1140" y="60" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#5b7a99" text-anchor="end">IMG 04</text>
+  <!-- esquinas de visor -->
+  <g stroke="#ffac1e" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M60 104 V 60 H 104"/>
+    <path d="M1096 60 H 1140 V 104"/>
+    <path d="M60 796 V 840 H 104"/>
+    <path d="M1096 840 H 1140 V 796"/>
+  </g>
+
+  <text x="90" y="115" font-family="Arial, sans-serif" font-weight="bold" font-size="26" letter-spacing="6" fill="#0f3c65">FOTOGRAFÍA DE PRODUCTO</text>
+  <text x="92" y="146" font-family="Arial, sans-serif" font-size="18" letter-spacing="8" fill="#e8930a">COMERCIAL</text>
+
+  <text x="1140" y="850" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#0f3c65" text-anchor="end">IMG 04</text>
 </svg>

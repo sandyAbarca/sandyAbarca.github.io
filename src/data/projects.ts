@@ -1,4 +1,4 @@
-export type Category = 'Branding' | 'Editorial' | 'Ilustración' | 'Social Media'
+export type Category = 'Fotografía' | 'Video' | 'Producción' | 'Editorial'
 
 export interface Project {
   id: number
@@ -7,15 +7,16 @@ export interface Project {
   year: number
   description: string
   image: string
-  tags: string[]
+  /** Datos técnicos estilo EXIF, le dan toque de fotógrafa a cada tarjeta */
+  exif: string
 }
 
 export const categories: Array<'Todos' | Category> = [
   'Todos',
-  'Branding',
+  'Fotografía',
+  'Video',
+  'Producción',
   'Editorial',
-  'Ilustración',
-  'Social Media',
 ]
 
 /**
@@ -25,62 +26,62 @@ export const categories: Array<'Todos' | Category> = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Sol de Maíz',
-    category: 'Branding',
+    title: 'Sesión Playa Dorada',
+    category: 'Fotografía',
     year: 2025,
     description:
-      'Identidad completa para una marca de productos de maíz orgánico: logotipo, paleta solar y empaque.',
+      'Retrato en hora dorada junto al mar: luz natural, brisa y piel al sol.',
     image: 'images/projects/proyecto-01.svg',
-    tags: ['Identidad', 'Packaging'],
+    exif: 'f/1.8 · 1/500s · ISO 100 · 85mm',
   },
   {
     id: 2,
-    title: 'Revista Páginas',
+    title: 'Lookbook Verano',
     category: 'Editorial',
-    year: 2024,
+    year: 2025,
     description:
-      'Diseño editorial y dirección de arte para una revista cultural independiente. Tres números publicados.',
+      'Lookbook de moda para una marca de ropa playera, con dirección de arte y retoque.',
     image: 'images/projects/proyecto-02.svg',
-    tags: ['Dirección de arte', 'Maquetación'],
+    exif: 'f/2.8 · 1/250s · ISO 200 · 50mm',
   },
   {
     id: 3,
-    title: 'Botánica',
-    category: 'Ilustración',
-    year: 2025,
+    title: 'Documental Costero',
+    category: 'Video',
+    year: 2024,
     description:
-      'Serie de ilustraciones botánicas vectoriales para papelería, murales y piezas de estación.',
+      'Mini documental sobre la vida de las y los pescadores del puerto al amanecer.',
     image: 'images/projects/proyecto-03.svg',
-    tags: ['Vectorial', 'Serie'],
+    exif: '4K · 24fps · S-Log3',
   },
   {
     id: 4,
-    title: 'Dulce Origen',
-    category: 'Branding',
-    year: 2024,
+    title: 'Café Norte',
+    category: 'Fotografía',
+    year: 2026,
     description:
-      'Packaging y sistema visual para una pastelería artesanal con aire de mercado local y recetas de casa.',
+      'Fotografía de producto para una cafetería de especialidad: tazas, grano y vapor.',
     image: 'images/projects/proyecto-04.svg',
-    tags: ['Packaging', 'Identidad'],
+    exif: 'f/5.6 · 1/125s · ISO 400 · 100mm',
   },
   {
     id: 5,
-    title: 'Café Norte',
-    category: 'Social Media',
-    year: 2026,
+    title: 'Cobertura Festival K’awil',
+    category: 'Producción',
+    year: 2024,
     description:
-      'Parrilla mensual y piezas para la campaña de lanzamiento de una cafetería de especialidad.',
+      'Cobertura de foto y video de un festival de arte: escenario, público y backstage.',
     image: 'images/projects/proyecto-05.svg',
-    tags: ['Campaña', 'Contenido'],
+    exif: 'f/2.8 · 1/1000s · ISO 800 · 24-70mm',
   },
   {
     id: 6,
-    title: 'Festival K’awil',
-    category: 'Ilustración',
-    year: 2024,
+    title: 'Campaña Social',
+    category: 'Producción',
+    year: 2026,
     description:
-      'Cartel e ilustración principal para un festival de arte y cultura. Versión impresa y digital.',
+      'Producción de contenido vertical para la campaña de lanzamiento de una marca local.',
     image: 'images/projects/proyecto-06.svg',
-    tags: ['Cartel', 'Ilustración'],
+    exif: '9:16 · 30fps · Color grade',
   },
 ]

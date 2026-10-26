@@ -1,6 +1,6 @@
 # Portafolio de Sandy Abarca
 
-Sitio web tipo portafolio para **Sandy Abarca, diseñadora gráfica**, construido con
+Sitio web tipo portafolio para **Sandy Abarca, fotógrafa y productora multimedia**, construido con
 **Vue 3 + Vite + TypeScript + Bootstrap 5** y publicado en **GitHub Pages**.
 
 🔗 **Sitio en vivo:** https://sandyabarca.github.io

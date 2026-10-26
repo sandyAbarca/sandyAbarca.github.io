@@ -11,39 +11,39 @@ export interface SocialLink {
 export const site = {
   name: 'Sandy Abarca',
   firstName: 'Sandy',
-  role: 'Diseñadora Gráfica',
+  role: 'Fotógrafa',
   email: 'Sansanabarca08@gmail.com',
   location: 'Tu Ciudad, Tu País',
   year: 2026,
 
   hero: {
     kicker: 'Portafolio · 2026',
-    line1: 'Diseño con',
-    accent: 'carácter',
-    line2: 'y calidez',
+    line1: 'Capturo historias',
+    accent: 'con luz',
+    line2: 'mar y carácter',
     subtitle:
-      'Soy Sandy, diseñadora gráfica. Convierto ideas en identidades visuales memorables: marcas, editorial, ilustración y contenido para redes sociales.',
+      'Soy Sandy, fotógrafa. Cuento historias con luz natural: retrato, moda, producto y video que se sienten cercanos y reales.',
     primaryCta: { label: 'Ver portafolio', href: '#portafolio' },
     secondaryCta: { label: 'Contáctame', href: '#contacto' },
-    portraitCaption: 'Sandy Abarca — retrato de ejemplo, reemplázalo por tu foto',
+    portraitCaption: 'Sandy Abarca — foto de ejemplo, reemplázala por tu retrato',
   },
 
   about: {
     kicker: 'Sobre mí',
     headingLine1: 'Hola, soy',
     headingAccent: 'Sandy',
-    lead: 'Diseñadora gráfica apasionada por las historias que se cuentan con color, letras y forma.',
+    lead: 'Fotógrafa y productora multimedia, enamorada de la luz dorada y del mar.',
     paragraphs: [
-      'Estudio diseño gráfico y trabajo en proyectos de branding, editorial e ilustración. Me gusta empezar cada proyecto escuchando: entender qué hace única a una marca y traducirlo en imágenes que la gente recuerda.',
-      'Fuera de la pantalla, me inspiran los mercados, la papelería antigua y las portadas de discos. Creo que el buen diseño es el que se siente cercano, cálido y hecho con intención.',
+      'Me dedico a la fotografía y la producción audiovisual: retrato, moda, producto y contenido para marcas que quieren verse auténticas. La hora dorada es mi oficina favorita.',
+      'Cuando no estoy detrás de la cámara, busco locaciones junto al mar, colecciono cámaras análogas y preparo playlists para las sesiones. Creo que la mejor foto es la que se siente espontánea.',
     ],
     stats: [
-      { value: '3+', label: 'años diseñando' },
-      { value: '20+', label: 'proyectos realizados' },
-      { value: '12', label: 'clientes felices' },
+      { value: '3+', label: 'años disparando' },
+      { value: '25+', label: 'sesiones realizadas' },
+      { value: '8', label: 'proyectos de video' },
     ],
-    skills: ['Photoshop', 'Illustrator', 'InDesign', 'Figma', 'After Effects'],
-    figureCaption: 'Mi rincón creativo — imagen de ejemplo',
+    skills: ['Lightroom', 'Photoshop', 'Premiere Pro', 'DaVinci Resolve', 'After Effects'],
+    figureCaption: 'Mi set junto al mar — imagen de ejemplo',
   },
 
   contact: {
@@ -51,7 +51,7 @@ export const site = {
     headingLine1: '¿Construimos',
     headingAccent: 'castillos',
     headingLine2: 'de arena juntos?',
-    text: '¿Tienes un proyecto, una idea o solo quieres saludar? Escríbeme y lo conversamos con un café frente al mar.',
+    text: '¿Tienes una sesión, un proyecto o una idea? Escríbeme y lo planeamos con un café frente al mar.',
     note: 'Respondo antes de que baje la marea ✳',
   },
 

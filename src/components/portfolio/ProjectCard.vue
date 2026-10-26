@@ -17,6 +17,7 @@ defineProps<{
         width="1200"
         height="900"
       />
+      <span class="corner-frame" aria-hidden="true"></span>
       <span class="project-badge category">{{ project.category }}</span>
       <span class="project-badge year">{{ project.year }}</span>
     </div>
@@ -27,9 +28,7 @@ defineProps<{
         <span class="arrow" aria-hidden="true">↗</span>
       </h3>
       <p>{{ project.description }}</p>
-      <div>
-        <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
-      </div>
+      <p class="project-exif">{{ project.exif }}</p>
     </div>
   </article>
 </template>

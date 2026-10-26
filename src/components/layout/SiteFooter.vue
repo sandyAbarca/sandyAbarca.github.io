@@ -29,7 +29,7 @@ const year = new Date().getFullYear()
       </nav>
 
       <div class="footer-bottom">
-        <span>© {{ year }} {{ site.name }} — Diseñadora Gráfica</span>
+        <span>© {{ year }} {{ site.name }} — {{ site.role }}</span>
         <span>
           Hecho con <span class="heart">♥</span> a la orilla del mar · Vue&nbsp;3 + Bootstrap&nbsp;5
         </span>

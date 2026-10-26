@@ -559,6 +559,7 @@ img {
 }
 
 .hero-frame {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 1.4rem;
@@ -635,11 +636,34 @@ img {
   }
 }
 
-/* Cinta de marea */
+/* Cinta de película (marquee) */
 .marquee {
+  position: relative;
   margin-top: 4.5rem;
-  background: var(--sky);
+  background: #0b2c4a;
   overflow: hidden;
+  padding-block: 1.1rem;
+}
+
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  z-index: 1;
+  background-image: radial-gradient(circle at 14px 5px, var(--sand) 4.5px, transparent 5.5px);
+  background-size: 28px 10px;
+  opacity: 0.9;
+}
+
+.marquee::before {
+  top: 7px;
+}
+
+.marquee::after {
+  bottom: 7px;
 }
 
 .marquee-track {
@@ -653,16 +677,15 @@ img {
   font-style: italic;
   font-weight: 500;
   font-size: 1.2rem;
-  color: var(--ocean);
+  color: var(--sand);
   white-space: nowrap;
-  padding: 0.95rem 0;
+  padding: 0.75rem 0;
 }
 
 .marquee-track span::after {
-  content: '≈';
+  content: '✳';
   font-style: normal;
-  color: var(--sand);
-  font-size: 1.5rem;
+  color: var(--sun);
   margin-inline: 2.6rem;
 }
 
@@ -1145,6 +1168,75 @@ img {
 
 .footer-bottom .heart {
   color: var(--sun);
+}
+
+/* Esquinas de visor (viewfinder) */
+.corner-frame {
+  position: absolute;
+  inset: 12px;
+  pointer-events: none;
+  --t: 3px;
+  --s: 24px;
+  --c: rgba(255, 242, 187, 0.92);
+  background:
+    linear-gradient(var(--c), var(--c)) left top / var(--s) var(--t),
+    linear-gradient(var(--c), var(--c)) left top / var(--t) var(--s),
+    linear-gradient(var(--c), var(--c)) right top / var(--s) var(--t),
+    linear-gradient(var(--c), var(--c)) right top / var(--t) var(--s),
+    linear-gradient(var(--c), var(--c)) left bottom / var(--s) var(--t),
+    linear-gradient(var(--c), var(--c)) left bottom / var(--t) var(--s),
+    linear-gradient(var(--c), var(--c)) right bottom / var(--s) var(--t),
+    linear-gradient(var(--c), var(--c)) right bottom / var(--t) var(--s);
+  background-repeat: no-repeat;
+}
+
+.project-card:hover .corner-frame {
+  --c: var(--sun);
+}
+
+/* Aperturas (diafragma) flotantes decorativas */
+.aperture-float {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--sky-deep);
+  animation: float-slow 9s ease-in-out infinite;
+}
+
+.aperture-float.a1 {
+  top: 17rem;
+  left: 4%;
+  width: 72px;
+  opacity: 0.4;
+}
+
+.aperture-float.a2 {
+  top: 4.5rem;
+  right: 7%;
+  width: 54px;
+  opacity: 0.3;
+  animation-delay: -4.5s;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(24deg);
+  }
+}
+
+/* Datos técnicos estilo EXIF en las tarjetas */
+.project-exif {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 1px dashed var(--line);
+  padding-top: 0.7rem;
 }
 
 /* ---------- Reveal (scroll) ---------- */

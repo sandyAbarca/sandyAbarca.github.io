@@ -1,41 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: cartel Festival K’awil">
-  <rect width="1200" height="900" fill="#0f3c65"/>
-  <rect x="40" y="40" width="1120" height="820" fill="none" stroke="#fff2bb" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: campaña para redes sociales">
+  <rect width="1200" height="900" fill="#fff2bb"/>
 
-  <!-- sol central -->
-  <g transform="translate(330 350)">
-    <g stroke="#ffac1e" stroke-width="20" stroke-linecap="round">
-      <path d="M0 -230 V -280"/>
-      <path d="M0 230 V 280"/>
-      <path d="M-230 0 H -280"/>
-      <path d="M230 0 H 280"/>
-      <path d="M-163 -163 L -198 -198"/>
-      <path d="M163 163 L 198 198"/>
-      <path d="M163 -163 L 198 -198"/>
-      <path d="M-163 163 L -198 198"/>
-    </g>
-    <circle r="150" fill="#ffac1e"/>
-    <circle r="100" fill="#0f3c65"/>
-    <circle r="52" fill="#fff2bb"/>
+  <!-- teléfono -->
+  <rect x="150" y="110" width="430" height="680" rx="52" fill="#0b2c4a"/>
+  <rect x="172" y="132" width="386" height="636" rx="36" fill="#fffce9"/>
+  <rect x="320" y="142" width="96" height="20" rx="10" fill="#0b2c4a"/>
+
+  <!-- feed -->
+  <rect x="200" y="185" width="330" height="180" rx="18" fill="#ffac1e"/>
+  <circle cx="365" cy="275" r="52" fill="#fffce9"/>
+  <rect x="200" y="385" width="330" height="180" rx="18" fill="#78c0e6"/>
+  <path d="M350 455 L350 495 L400 475 Z" fill="#fffce9"/>
+  <rect x="200" y="585" width="330" height="150" rx="18" fill="#0f3c65"/>
+  <g transform="translate(336 630) scale(1.55)">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="#ffac1e"/>
   </g>
 
-  <!-- tipografía de cartel -->
-  <text x="640" y="300" font-family="Arial, sans-serif" font-weight="bold" font-size="120" letter-spacing="6" fill="#fff2bb">FESTIVAL</text>
-  <text x="640" y="410" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="600" font-size="110" fill="#ffac1e">K’awil</text>
-  <text x="642" y="470" font-family="Arial, sans-serif" font-size="26" letter-spacing="12" fill="#78c0e6">ARTE · MÚSICA · CULTURA</text>
-  <rect x="642" y="500" width="200" height="8" fill="#ffac1e"/>
-  <text x="642" y="590" font-family="Arial, sans-serif" font-weight="bold" font-size="46" letter-spacing="4" fill="#fff2bb">10 · 11 · 12 ABRIL</text>
-  <text x="642" y="650" font-family="Arial, sans-serif" font-size="24" letter-spacing="6" fill="#78c0e6">ENTRADA LIBRE — PLAZA CENTRAL</text>
+  <!-- textos -->
+  <text x="690" y="330" font-family="Arial, sans-serif" font-weight="bold" font-size="88" letter-spacing="4" fill="#0f3c65">CAMPAÑA</text>
+  <text x="690" y="408" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="600" font-size="76" fill="#ffac1e">Social</text>
+  <text x="692" y="462" font-family="Arial, sans-serif" font-size="22" letter-spacing="6" fill="#e8930a">9:16 · 30FPS · COLOR GRADE</text>
+  <text x="692" y="512" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#0f3c65" opacity="0.75">CONTENIDO PARA MARCAS</text>
 
-  <!-- confeti -->
-  <g>
-    <circle cx="850" cy="120" r="12" fill="#ffac1e"/>
-    <circle cx="950" cy="700" r="10" fill="#ffac1e"/>
-    <circle cx="1050" cy="130" r="8" fill="#fff2bb"/>
-    <circle cx="1100" cy="420" r="9" fill="#78c0e6"/>
-    <rect x="880" y="600" width="16" height="16" fill="#78c0e6" transform="rotate(20 888 608)"/>
-    <rect x="1020" y="740" width="14" height="14" fill="#fff2bb" transform="rotate(45 1027 747)"/>
+  <!-- destellos -->
+  <g fill="#78c0e6">
+    <path d="M1050 200 L1053 209 L1062 212 L1053 215 L1050 224 L1047 215 L1038 212 L1047 209 Z"/>
+    <path d="M960 620 L962.5 627 L970 629 L962.5 631.5 L960 639 L957.5 631.5 L950 629 L957.5 627 Z"/>
   </g>
 
-  <text x="1140" y="810" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#78c0e6" text-anchor="end">IMG 06</text>
+  <text x="1140" y="850" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#0f3c65" text-anchor="end">IMG 06</text>
 </svg>

@@ -1,10 +1,39 @@
 <script setup lang="ts">
 import { site } from '../../data/site'
+
+const bubbles = [
+  { left: '6%', size: 16, dur: 12, delay: 0, sun: false },
+  { left: '14%', size: 10, dur: 9, delay: -3, sun: true },
+  { left: '24%', size: 22, dur: 14, delay: -6, sun: false },
+  { left: '38%', size: 12, dur: 10, delay: -1, sun: false },
+  { left: '52%', size: 18, dur: 13, delay: -8, sun: true },
+  { left: '63%', size: 9, dur: 8, delay: -2, sun: false },
+  { left: '74%', size: 20, dur: 15, delay: -5, sun: false },
+  { left: '86%', size: 13, dur: 11, delay: -9, sun: true },
+  { left: '93%', size: 17, dur: 12, delay: -4, sun: false },
+]
 </script>
 
 <template>
   <section id="contacto" class="section section-contact">
-    <div class="container">
+    <!-- Burbujas marinas -->
+    <div class="bubbles" aria-hidden="true">
+      <span
+        v-for="(bubble, i) in bubbles"
+        :key="i"
+        class="bubble"
+        :class="{ 'is-sun': bubble.sun }"
+        :style="{
+          left: bubble.left,
+          width: `${bubble.size}px`,
+          height: `${bubble.size}px`,
+          animationDuration: `${bubble.dur}s`,
+          animationDelay: `${bubble.delay}s`,
+        }"
+      ></span>
+    </div>
+
+    <div class="container position-relative">
       <div class="section-head justify-content-center" v-reveal>
         <span class="num">04</span>
         <span class="kicker">{{ site.contact.kicker }}</span>

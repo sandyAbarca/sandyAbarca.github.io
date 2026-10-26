@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { site } from '../../data/site'
 import { img } from '../../utils/assets'
+import WaveDivider from '../layout/WaveDivider.vue'
 
 const marqueeItems = [
   'Branding',
@@ -18,6 +19,25 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
 
 <template>
   <section id="inicio" class="section section-hero">
+    <!-- Nubes a la deriva -->
+    <div class="clouds" aria-hidden="true">
+      <svg class="cloud c1" viewBox="0 0 200 70">
+        <path
+          d="M35 55 a22 22 0 0 1 0-44 a28 28 0 0 1 54-9 a20 20 0 0 1 33 11 a22 22 0 0 1 0 42 Z"
+        />
+      </svg>
+      <svg class="cloud c2" viewBox="0 0 200 70">
+        <path
+          d="M35 55 a22 22 0 0 1 0-44 a28 28 0 0 1 54-9 a20 20 0 0 1 33 11 a22 22 0 0 1 0 42 Z"
+        />
+      </svg>
+      <svg class="cloud c3" viewBox="0 0 200 70">
+        <path
+          d="M35 55 a22 22 0 0 1 0-44 a28 28 0 0 1 54-9 a20 20 0 0 1 33 11 a22 22 0 0 1 0 42 Z"
+        />
+      </svg>
+    </div>
+
     <div class="container">
       <div class="row g-5 align-items-center">
         <div class="col-lg-7">
@@ -41,6 +61,7 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
 
         <div class="col-lg-5">
           <figure class="hero-figure" v-reveal="150">
+            <span class="hand-note" aria-hidden="true">¡hola! soy Sandy ✳</span>
             <span class="tape" aria-hidden="true"></span>
             <div class="hero-frame">
               <img
@@ -63,23 +84,45 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
                     id="stamp-circle"
                     d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"
                   />
+                  <radialGradient id="sun-grad" cx="50%" cy="42%" r="72%">
+                    <stop offset="0%" stop-color="#ffd35c" />
+                    <stop offset="100%" stop-color="#ffac1e" />
+                  </radialGradient>
                 </defs>
-                <circle cx="60" cy="60" r="58" :fill="`var(--accent)`" />
-                <circle cx="60" cy="60" r="40" fill="none" stroke="rgba(255,246,234,.45)" stroke-width="1" stroke-dasharray="2 4" />
+                <g fill="#78c0e6">
+                  <path d="M60 4 L67 24 L60 32 L53 24 Z" />
+                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(45 60 60)" />
+                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(90 60 60)" />
+                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(135 60 60)" />
+                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(180 60 60)" />
+                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(225 60 60)" />
+                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(270 60 60)" />
+                  <path d="M60 4 L67 24 L60 32 L53 24 Z" transform="rotate(315 60 60)" />
+                </g>
+                <circle cx="60" cy="60" r="40" fill="url(#sun-grad)" />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="31"
+                  fill="none"
+                  stroke="rgba(15,60,101,.25)"
+                  stroke-width="1"
+                  stroke-dasharray="2 4"
+                />
                 <text
                   font-family="Archivo, sans-serif"
-                  font-size="12"
-                  font-weight="600"
-                  letter-spacing="2"
-                  fill="#fff6ea"
+                  font-size="11"
+                  font-weight="700"
+                  letter-spacing="1.6"
+                  fill="#0f3c65"
                 >
                   <textPath href="#stamp-circle" textLength="278">
-                    PORTAFOLIO ✳ 2026 ✳ DISEÑO GRÁFICO
+                    SOL ✳ MAR ✳ ARENA ✳ 2026
                   </textPath>
                 </text>
                 <path
-                  d="M60 44 L63 56 L75 60 L63 64 L60 76 L57 64 L45 60 L57 56 Z"
-                  fill="#fff6ea"
+                  d="M60 47 L62.5 55.5 L71 58 L62.5 60.5 L60 69 L57.5 60.5 L49 58 L57.5 55.5 Z"
+                  fill="#fff2bb"
                 />
               </svg>
             </div>
@@ -88,10 +131,14 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
       </div>
     </div>
 
+    <!-- Línea de marea -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
         <span v-for="(item, i) in marqueeLoop" :key="i">{{ item }}</span>
       </div>
     </div>
+
+    <!-- Ola hacia la siguiente sección -->
+    <WaveDivider front="var(--bg-soft)" back="rgba(120, 192, 230, 0.5)" duration="20s" />
   </section>
 </template>

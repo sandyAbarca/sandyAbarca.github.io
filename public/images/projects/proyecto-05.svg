@@ -1,33 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Imagen de ejemplo: campaña Café Norte">
-  <rect width="1200" height="900" fill="#4e342e"/>
+  <rect width="1200" height="900" fill="#0f3c65"/>
 
-  <text x="120" y="180" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="130" fill="#f6f1e8">Café Norte</text>
-  <text x="122" y="230" font-family="Arial, sans-serif" font-size="24" letter-spacing="10" fill="#d9b48f">CAMPAÑA · SOCIAL MEDIA</text>
+  <text x="120" y="180" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="130" fill="#fff2bb">Café Norte</text>
+  <text x="122" y="230" font-family="Arial, sans-serif" font-size="24" letter-spacing="10" fill="#78c0e6">CAMPAÑA · SOCIAL MEDIA</text>
 
   <!-- teléfono -->
   <g transform="translate(190 320)">
-    <rect width="330" height="520" rx="44" fill="#2a211c"/>
-    <rect x="14" y="14" width="302" height="492" rx="34" fill="#f6f1e8"/>
-    <rect x="129" y="34" width="72" height="16" rx="8" fill="#2a211c"/>
-    <g fill="#c14e2b">
+    <rect width="330" height="520" rx="44" fill="#0b2c4a"/>
+    <rect x="14" y="14" width="302" height="492" rx="34" fill="#fff2bb"/>
+    <rect x="129" y="34" width="72" height="16" rx="8" fill="#0b2c4a"/>
+    <g fill="#ffac1e">
       <rect x="44" y="90" width="104" height="104" rx="14"/>
       <rect x="162" y="90" width="104" height="104" rx="14"/>
       <rect x="44" y="208" width="222" height="130" rx="14"/>
       <rect x="44" y="352" width="104" height="104" rx="14"/>
       <rect x="162" y="352" width="104" height="104" rx="14"/>
     </g>
-    <circle cx="165" cy="142" r="34" fill="#f6f1e8"/>
-    <path d="M152 158 Q165 146 178 158" fill="none" stroke="#f6f1e8" stroke-width="6" stroke-linecap="round"/>
-    <path d="M152 168 Q165 156 178 168" fill="none" stroke="#f6f1e8" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="165" cy="142" r="34" fill="#fff2bb"/>
+    <path d="M152 158 Q165 146 178 158" fill="none" stroke="#fff2bb" stroke-width="6" stroke-linecap="round"/>
+    <path d="M152 168 Q165 156 178 168" fill="none" stroke="#fff2bb" stroke-width="6" stroke-linecap="round"/>
   </g>
 
   <!-- taza con vapor -->
   <g transform="translate(760 470)">
-    <path d="M-40 -150 Q-20 -190 10 -160 M20 -170 Q40 -210 70 -180" stroke="#d9b48f" stroke-width="8" stroke-linecap="round" fill="none"/>
-    <path d="M-70 -60 H70 V30 Q70 90 0 90 Q-70 90 -70 30 Z" fill="#c14e2b"/>
-    <path d="M70 -40 H105 A30 30 0 0 1 70 10" fill="none" stroke="#c14e2b" stroke-width="14"/>
-    <rect x="-90" y="90" width="190" height="18" rx="9" fill="#2a211c"/>
+    <path d="M-40 -150 Q-20 -190 10 -160 M20 -170 Q40 -210 70 -180" stroke="#78c0e6" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M-70 -60 H70 V30 Q70 90 0 90 Q-70 90 -70 30 Z" fill="#ffac1e"/>
+    <path d="M70 -40 H105 A30 30 0 0 1 70 10" fill="none" stroke="#ffac1e" stroke-width="14"/>
+    <rect x="-90" y="90" width="190" height="18" rx="9" fill="#0b2c4a"/>
   </g>
 
-  <text x="1140" y="850" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#d9b48f" text-anchor="end">IMG 05</text>
+  <text x="1140" y="850" font-family="Arial, sans-serif" font-size="20" letter-spacing="4" fill="#78c0e6" text-anchor="end">IMG 05</text>
 </svg>

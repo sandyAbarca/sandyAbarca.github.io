@@ -12,6 +12,7 @@ import { services } from '../../data/services'
       </div>
 
       <h2 class="section-title" v-reveal="60">Lo que hago <em>mejor</em></h2>
+      <p class="hand" v-reveal="100">hecho con cariño ✳</p>
 
       <div class="row g-4">
         <div

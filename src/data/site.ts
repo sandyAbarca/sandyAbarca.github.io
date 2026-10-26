@@ -48,11 +48,11 @@ export const site = {
 
   contact: {
     kicker: 'Contacto',
-    headingLine1: '¿Hacemos algo',
-    headingAccent: 'hermoso',
-    headingLine2: 'juntos?',
-    text: '¿Tienes un proyecto, una idea o solo quieres saludar? Escríbeme y lo conversamos con un café (o un té, también vale).',
-    note: 'Respondo en un máximo de 48 horas.',
+    headingLine1: '¿Construimos',
+    headingAccent: 'castillos',
+    headingLine2: 'de arena juntos?',
+    text: '¿Tienes un proyecto, una idea o solo quieres saludar? Escríbeme y lo conversamos con un café frente al mar.',
+    note: 'Respondo antes de que baje la marea ✳',
   },
 
   socials: [

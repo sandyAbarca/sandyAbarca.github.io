@@ -19,6 +19,7 @@ import { img } from '../../utils/assets'
           <h2 class="section-title" v-reveal="60">
             {{ site.about.headingLine1 }} <em>{{ site.about.headingAccent }}</em>
           </h2>
+          <p class="hand" v-reveal="100">siempre cerca del mar ✳</p>
           <p class="lead" v-reveal="120">{{ site.about.lead }}</p>
 
           <p v-for="(paragraph, i) in site.about.paragraphs" :key="i" v-reveal="140 + i * 60">

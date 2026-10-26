@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { categories, projects } from '../../data/projects'
 import ProjectCard from '../portfolio/ProjectCard.vue'
+import WaveDivider from '../layout/WaveDivider.vue'
 
 const activeCategory = ref<(typeof categories)[number]>('Todos')
 
@@ -22,6 +23,7 @@ const filteredProjects = computed(() =>
       </div>
 
       <h2 class="section-title" v-reveal="60">Trabajos <em>seleccionados</em></h2>
+      <p class="hand" v-reveal="100">con arena entre los dedos ✳</p>
 
       <div class="pills-row" role="group" aria-label="Filtrar proyectos" v-reveal="120">
         <button
@@ -52,5 +54,8 @@ const filteredProjects = computed(() =>
         Mostrando <strong>{{ filteredProjects.length }}</strong> de {{ projects.length }} proyectos
       </p>
     </div>
+
+    <!-- Ola hacia la sección de contacto -->
+    <WaveDivider front="var(--bg)" back="rgba(120, 192, 230, 0.5)" duration="20s" />
   </section>
 </template>

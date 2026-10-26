@@ -1,11 +1,20 @@
 <script setup lang="ts">
 import { site } from '../../data/site'
+import WaveDivider from './WaveDivider.vue'
 
 const year = new Date().getFullYear()
 </script>
 
 <template>
   <footer class="site-footer">
+    <div style="background: var(--bg)">
+      <WaveDivider
+        front="var(--ocean)"
+        back="rgba(120, 192, 230, 0.55)"
+        duration="22s"
+      />
+    </div>
+
     <div class="container">
       <p class="footer-wordmark" aria-hidden="true">
         Sandy <em>Abarca</em><span class="text-accent">.</span>
@@ -22,7 +31,7 @@ const year = new Date().getFullYear()
       <div class="footer-bottom">
         <span>© {{ year }} {{ site.name }} — Diseñadora Gráfica</span>
         <span>
-          Hecho con <span class="heart">♥</span> y Vue&nbsp;3 + Bootstrap&nbsp;5
+          Hecho con <span class="heart">♥</span> a la orilla del mar · Vue&nbsp;3 + Bootstrap&nbsp;5
         </span>
       </div>
     </div>
@@ -31,6 +40,6 @@ const year = new Date().getFullYear()
 
 <style scoped>
 .text-accent {
-  color: var(--accent);
+  color: var(--sun);
 }
 </style>

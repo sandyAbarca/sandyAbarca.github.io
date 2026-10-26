@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
-import { useTheme } from '../../composables/useTheme'
 import { site } from '../../data/site'
 
 const links = [
@@ -11,7 +10,6 @@ const links = [
   { id: 'contacto', label: 'Contacto' },
 ]
 
-const { theme, toggleTheme } = useTheme()
 const scrolled = ref(false)
 const menuOpen = ref(false)
 const activeId = ref('inicio')
@@ -72,41 +70,6 @@ onUnmounted(() => {
       </nav>
 
       <div class="d-flex align-items-center gap-2">
-        <button
-          class="icon-btn"
-          type="button"
-          :aria-label="theme === 'light' ? 'Activar modo oscuro' : 'Activar modo claro'"
-          @click="toggleTheme"
-        >
-          <svg
-            v-if="theme === 'light'"
-            width="17"
-            height="17"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-          >
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-          </svg>
-          <svg
-            v-else
-            width="17"
-            height="17"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-          >
-            <circle cx="12" cy="12" r="4" />
-            <path
-              d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
-            />
-          </svg>
-        </button>
-
         <button
           class="icon-btn burger d-lg-none"
           :class="{ 'is-open': menuOpen }"

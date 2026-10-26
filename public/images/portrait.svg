@@ -1,38 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Retrato ilustrado de ejemplo de Sandy Abarca">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f4ead9"/>
-      <stop offset="1" stop-color="#e8d6bb"/>
+      <stop offset="0" stop-color="#fff2bb"/>
+      <stop offset="1" stop-color="#f7e3a3"/>
     </linearGradient>
   </defs>
 
   <rect width="800" height="1000" fill="url(#bg)"/>
 
-  <!-- marco tipo arco -->
-  <path d="M210 680 L210 310 A190 190 0 0 1 590 310 L590 680 Z" fill="#c14e2b"/>
+  <!-- marco tipo arco (océano) -->
+  <path d="M210 680 L210 310 A190 190 0 0 1 590 310 L590 680 Z" fill="#0f3c65"/>
+
+  <!-- sol de fondo -->
+  <g>
+    <circle cx="400" cy="250" r="62" fill="#ffac1e"/>
+    <g stroke="#ffac1e" stroke-width="10" stroke-linecap="round">
+      <path d="M400 150 V 130"/>
+      <path d="M400 350 V 370"/>
+      <path d="M300 250 H 280"/>
+      <path d="M500 250 H 520"/>
+      <path d="M329 179 L 315 165"/>
+      <path d="M471 179 L 485 165"/>
+      <path d="M329 321 L 315 335"/>
+      <path d="M471 321 L 485 335"/>
+    </g>
+  </g>
 
   <!-- cabello trasero -->
-  <ellipse cx="400" cy="385" rx="168" ry="190" fill="#2a211c"/>
+  <ellipse cx="400" cy="385" rx="168" ry="190" fill="#102f4c"/>
   <!-- rostro -->
   <ellipse cx="400" cy="405" rx="118" ry="140" fill="#e9b98e"/>
   <!-- cabello delantero -->
-  <path d="M282 390 A118 118 0 0 1 518 390 L518 305 Q400 205 282 305 Z" fill="#2a211c"/>
-  <!-- aretes -->
-  <circle cx="280" cy="475" r="11" fill="#c98f2b"/>
-  <circle cx="520" cy="475" r="11" fill="#c98f2b"/>
+  <path d="M282 390 A118 118 0 0 1 518 390 L518 305 Q400 205 282 305 Z" fill="#102f4c"/>
+  <!-- aretes de sol -->
+  <circle cx="280" cy="475" r="11" fill="#ffac1e"/>
+  <circle cx="520" cy="475" r="11" fill="#ffac1e"/>
   <!-- ojos cerrados -->
-  <path d="M322 402 Q340 418 358 402" fill="none" stroke="#2a211c" stroke-width="7" stroke-linecap="round"/>
-  <path d="M442 402 Q460 418 478 402" fill="none" stroke="#2a211c" stroke-width="7" stroke-linecap="round"/>
+  <path d="M322 402 Q340 418 358 402" fill="none" stroke="#0f3c65" stroke-width="7" stroke-linecap="round"/>
+  <path d="M442 402 Q460 418 478 402" fill="none" stroke="#0f3c65" stroke-width="7" stroke-linecap="round"/>
   <!-- sonrisa -->
   <path d="M372 462 Q400 492 428 462" fill="none" stroke="#b4784f" stroke-width="6" stroke-linecap="round"/>
   <!-- rubor -->
   <ellipse cx="322" cy="450" rx="24" ry="13" fill="#e8a08b" opacity="0.55"/>
   <ellipse cx="478" cy="450" rx="24" ry="13" fill="#e8a08b" opacity="0.55"/>
-  <!-- cuello y hombros -->
+  <!-- cuello y hombros (cielo) -->
   <rect x="377" y="528" width="46" height="52" fill="#e0a87b"/>
-  <path d="M400 585 C340 585 300 645 268 725 L532 725 C500 645 460 585 400 585 Z" fill="#9c3a1d"/>
+  <path d="M400 585 C340 585 300 645 268 725 L532 725 C500 645 460 585 400 585 Z" fill="#78c0e6"/>
 
   <!-- firma -->
-  <text x="400" y="845" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="600" font-size="58" fill="#211b15" text-anchor="middle">Sandy Abarca</text>
-  <text x="400" y="895" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#827666" text-anchor="middle">RETRATO DE EJEMPLO · REEMPLÁZAME</text>
+  <text x="400" y="845" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="600" font-size="58" fill="#0f3c65" text-anchor="middle">Sandy Abarca</text>
+  <text x="400" y="895" font-family="Arial, sans-serif" font-size="15" letter-spacing="5" fill="#5b7a99" text-anchor="middle">RETRATO DE EJEMPLO · REEMPLÁZAME</text>
 </svg>

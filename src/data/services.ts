@@ -1,15 +1,14 @@
-export type ServiceIcon = 'fotografia' | 'video' | 'edicion' | 'arte'
+export type ServiceIcon = 'fotografia' | 'video' | 'diseno'
 
 export interface Service {
   id: number
   icon: ServiceIcon
   title: string
   description: string
-  tags: string[]
 }
 
 /**
- * ✏️ EDITA AQUÍ la lista de servicios.
+ * ✏️ EDITA AQUÍ la lista de servicios y los programas que manejas.
  */
 export const services: Service[] = [
   {
@@ -17,31 +16,29 @@ export const services: Service[] = [
     icon: 'fotografia',
     title: 'Fotografía',
     description:
-      'Retrato, moda y producto con luz natural. Sesiones que se sienten cercanas, reales y con mucha personalidad.',
-    tags: ['Retrato', 'Moda', 'Producto'],
+      'Captura de momentos, retratos e historias con intención visual y manejo estratégico de la luz natural y de estudio.',
   },
   {
     id: 2,
     icon: 'video',
-    title: 'Producción Audiovisual',
+    title: 'Audiovisual',
     description:
-      'Video y cobertura de eventos: del storyboard al montaje final, con ritmo, emoción y buena música.',
-    tags: ['Coberturas', 'Video marca', 'Storyboard'],
+      'Edición, dirección y producción de video enfocadas en transmitir emociones y conectar con la audiencia.',
   },
   {
     id: 3,
-    icon: 'edicion',
-    title: 'Edición y Postproducción',
+    icon: 'diseno',
+    title: 'Diseño',
     description:
-      'Edición de video, color y retoque fotográfico: el acabado que hace brillar cada toma.',
-    tags: ['Edición', 'Color', 'Retoque'],
+      'Creación de identidad visual, piezas gráficas y maquetación listas para destacar en medios digitales e impresos.',
   },
-  {
-    id: 4,
-    icon: 'arte',
-    title: 'Dirección de Arte',
-    description:
-      'Concepto visual para sesiones y campañas: locaciones, props, iluminación y estética de principio a fin.',
-    tags: ['Campañas', 'Set', 'Look & feel'],
-  },
+]
+
+export const programs = [
+  'Adobe Photoshop',
+  'Adobe Illustrator',
+  'Adobe Lightroom',
+  'Adobe InDesign',
+  'Adobe Premiere',
+  'Adobe Audition',
 ]

@@ -1,6 +1,6 @@
 # Portafolio de Sandy Abarca
 
-Sitio web tipo portafolio para **Sandy Abarca, fotógrafa y productora multimedia**, construido con
+Sitio web tipo portafolio para **Sandy Abarca, Productora Multimedia**, construido con
 **Vue 3 + Vite + TypeScript + Bootstrap 5** y publicado en **GitHub Pages**.
 
 🔗 **Sitio en vivo:** https://sandyabarca.github.io
@@ -13,18 +13,20 @@ Todo el contenido está separado del código, en la carpeta `src/data/`:
 
 | Qué quieres cambiar        | Dónde se edita                          |
 | -------------------------- | --------------------------------------- |
-| Nombre, correo, redes      | `src/data/site.ts`                      |
+| Nombre, correo, teléfono   | `src/data/site.ts`                      |
 | Textos del "Sobre mí"      | `src/data/site.ts` (bloque `about`)     |
-| Lista de servicios         | `src/data/services.ts`                  |
-| Proyectos del portafolio   | `src/data/projects.ts`                  |
-| Fotos e imágenes           | `public/images/` (reemplaza los archivos) |
+| Servicios y programas      | `src/data/services.ts`                  |
+| Proyectos y "otros"        | `src/data/projects.ts`                  |
+| Fotos, videos, CV, logo    | `src/assets/images/` (reemplaza los archivos) |
 
-> 💡 Para reemplazar una imagen: sube tu foto con el **mismo nombre** del archivo
-> (ej. `portrait.svg` → cámbialo por `portrait.jpg` y actualiza el nombre en `site.ts`)
-> o cambia el nombre en el archivo de datos correspondiente.
+> 💡 Las fotos de los carruseles y los videos se importan desde
+> `src/assets/images/` (carpetas `monster_energy/` y `restaurante_sushi/`).
+> Para cambiar una foto: reemplaza el archivo con el mismo nombre, o edita
+> la importación en `src/data/projects.ts`.
 
-Puedes editar estos archivos **directamente desde github.com** (botón ✏️ sobre el archivo).
-Al guardar, el sitio se actualiza solo en unos minutos gracias a GitHub Actions.
+El formulario de contacto envía los mensajes al correo mediante
+[FormSubmit.co](https://formsubmit.co) (gratuito). La primera vez que alguien
+escriba, FormSubmit enviará un correo de activación a `sansanabarca08@gmail.com`.
 
 ---
 

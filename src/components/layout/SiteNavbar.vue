@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
-import { site } from '../../data/site'
+import logoUrl from '../../assets/images/Logo.png'
 
 const links = [
   { id: 'inicio', label: 'Inicio' },
   { id: 'sobre-mi', label: 'Sobre mí' },
   { id: 'servicios', label: 'Servicios' },
-  { id: 'portafolio', label: 'Portafolio' },
-  { id: 'contacto', label: 'Contacto' },
+  { id: 'proyectos', label: 'Proyectos' },
+  { id: 'hoja-de-vida', label: 'Hoja de vida' },
+  { id: 'contacto', label: 'Contáctame' },
 ]
 
 const scrolled = ref(false)
@@ -52,9 +53,8 @@ onUnmounted(() => {
 <template>
   <header class="site-navbar" :class="{ 'is-scrolled': scrolled }">
     <div class="container d-flex align-items-center justify-content-between gap-3">
-      <a class="brand" href="#inicio" @click="closeMenu">
-        <span class="brand-mark" aria-hidden="true">SA</span>
-        <span class="brand-name">{{ site.firstName }} <em>{{ site.role }}</em></span>
+      <a class="brand" href="#inicio" @click="closeMenu" aria-label="Sandy Abarca — Inicio">
+        <img class="brand-logo" :src="logoUrl" alt="Logo de Sandy Abarca" />
       </a>
 
       <nav class="d-none d-lg-flex align-items-center gap-4" aria-label="Principal">
@@ -94,9 +94,3 @@ onUnmounted(() => {
     </Transition>
   </header>
 </template>
-
-<style scoped>
-.brand-name em {
-  display: none;
-}
-</style>

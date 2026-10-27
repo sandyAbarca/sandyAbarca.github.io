@@ -24,8 +24,9 @@ const year = new Date().getFullYear()
         <a href="#inicio">Inicio</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#servicios">Servicios</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#hoja-de-vida">Hoja de vida</a>
+        <a href="#contacto">Contáctame</a>
       </nav>
 
       <div class="footer-bottom">

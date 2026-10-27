@@ -1,75 +1,48 @@
-export interface SocialLink {
-  label: string
-  handle: string
-  url: string
-}
-
 /**
  * ✏️ EDITA AQUÍ los datos generales del sitio.
- * Cambia textos, correo, redes y frases sin tocar el código de los componentes.
+ * Cambia textos, correo, teléfono y frases sin tocar el código de los componentes.
  */
 export const site = {
   name: 'Sandy Abarca',
   firstName: 'Sandy',
-  role: 'Fotógrafa',
-  email: 'Sansanabarca08@gmail.com',
-  location: 'Tu Ciudad, Tu País',
+  role: 'Productora Multimedia',
+  email: 'sansanabarca08@gmail.com',
+  location: 'San Salvador, El Salvador',
   year: 2026,
 
   hero: {
     kicker: 'Portafolio · 2026',
-    line1: 'Capturo historias',
-    accent: 'con luz',
-    line2: 'mar y carácter',
+    line1: 'Soy',
+    accent: 'Sandy',
+    line2: 'Abarca',
     subtitle:
-      'Soy Sandy, fotógrafa. Cuento historias con luz natural: retrato, moda, producto y video que se sienten cercanos y reales.',
-    primaryCta: { label: 'Ver portafolio', href: '#portafolio' },
+      'Soy Productora Multimedia, mi objetivo es capturar tu esencia y darle vida.',
+    primaryCta: { label: 'Ver proyectos', href: '#proyectos' },
     secondaryCta: { label: 'Contáctame', href: '#contacto' },
-    portraitCaption: 'Sandy Abarca — foto de ejemplo, reemplázala por tu retrato',
+    videoNote: 'Video de presentación · próximamente',
   },
 
   about: {
     kicker: 'Sobre mí',
     headingLine1: 'Hola, soy',
     headingAccent: 'Sandy',
-    lead: 'Fotógrafa y productora multimedia, enamorada de la luz dorada y del mar.',
+    handNote: 'fotografía · retrato ✳',
     paragraphs: [
-      'Me dedico a la fotografía y la producción audiovisual: retrato, moda, producto y contenido para marcas que quieren verse auténticas. La hora dorada es mi oficina favorita.',
-      'Cuando no estoy detrás de la cámara, busco locaciones junto al mar, colecciono cámaras análogas y preparo playlists para las sesiones. Creo que la mejor foto es la que se siente espontánea.',
+      'Soy Sandy Abarca, Productora Multimedia, Estudiante de Ciencias de la Comunicación en la Universidad Don Bosco, apasionada por el mundo audiovisual, la fotografía y el diseño. Me dedico a transformar ideas en historias visuales con identidad, cuidando cada detalle detrás de la lente.',
     ],
-    stats: [
-      { value: '3+', label: 'años disparando' },
-      { value: '25+', label: 'sesiones realizadas' },
-      { value: '8', label: 'proyectos de video' },
-    ],
-    skills: ['Lightroom', 'Photoshop', 'Premiere Pro', 'DaVinci Resolve', 'After Effects'],
-    figureCaption: 'Mi set junto al mar — imagen de ejemplo',
+    figureCaption: 'Sandy Abarca — fotografía retrato',
   },
 
   contact: {
-    kicker: 'Contacto',
-    headingLine1: '¿Construimos',
-    headingAccent: 'castillos',
-    headingLine2: 'de arena juntos?',
-    text: '¿Tienes una sesión, un proyecto o una idea? Escríbeme y lo planeamos con un café frente al mar.',
+    kicker: 'Contáctame',
+    headingLine1: 'Hablemos de tu',
+    headingAccent: 'próximo',
+    headingLine2: 'Proyecto',
+    text: 'Cuéntame tu idea y la hacemos realidad.',
     note: 'Respondo antes de que baje la marea ✳',
+    email: 'sansanabarca08@gmail.com',
+    whatsappDisplay: '6272 9380',
+    whatsappLink: 'https://wa.me/50362729380',
+    location: 'San Salvador, El Salvador',
   },
-
-  socials: [
-    {
-      label: 'Instagram',
-      handle: '@sandy.abarca',
-      url: 'https://www.instagram.com/',
-    },
-    {
-      label: 'Behance',
-      handle: '/sandyabarca',
-      url: 'https://www.behance.net/',
-    },
-    {
-      label: 'LinkedIn',
-      handle: '/in/sandyabarca',
-      url: 'https://www.linkedin.com/',
-    },
-  ] as SocialLink[],
 }

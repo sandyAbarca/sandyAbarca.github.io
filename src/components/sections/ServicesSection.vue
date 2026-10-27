@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { services } from '../../data/services'
+import { programs, services } from '../../data/services'
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import { services } from '../../data/services'
     <div class="container">
       <div class="section-head" v-reveal>
         <span class="num">02</span>
-        <span class="kicker">Servicios</span>
+        <span class="kicker">Servicios y áreas</span>
         <span class="rule"></span>
       </div>
 
@@ -18,7 +18,7 @@ import { services } from '../../data/services'
         <div
           v-for="(service, i) in services"
           :key="service.id"
-          class="col-md-6"
+          class="col-md-4"
           v-reveal="100 + i * 90"
         >
           <article class="service-card">
@@ -28,8 +28,8 @@ import { services } from '../../data/services'
               <!-- Fotografía: cámara -->
               <svg
                 v-if="service.icon === 'fotografia'"
-                width="24"
-                height="24"
+                width="26"
+                height="26"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -41,11 +41,11 @@ import { services } from '../../data/services'
                 <circle cx="12" cy="13" r="3" />
               </svg>
 
-              <!-- Producción: claqueta -->
+              <!-- Audiovisual: claqueta -->
               <svg
                 v-else-if="service.icon === 'video'"
-                width="24"
-                height="24"
+                width="26"
+                height="26"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -59,29 +59,11 @@ import { services } from '../../data/services'
                 <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
               </svg>
 
-              <!-- Edición: monitor con play y timeline -->
-              <svg
-                v-else-if="service.icon === 'edicion'"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="2" y="4" width="20" height="14" rx="2" />
-                <path d="m10 8 4 3-4 3Z" />
-                <path d="M6 21h4" />
-                <path d="M14 21h4" />
-              </svg>
-
-              <!-- Dirección de arte: paleta -->
+              <!-- Diseño: pluma -->
               <svg
                 v-else
-                width="24"
-                height="24"
+                width="26"
+                height="26"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -89,25 +71,33 @@ import { services } from '../../data/services'
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <circle cx="13.5" cy="6.5" r="0.5" fill="currentColor" />
-                <circle cx="17.5" cy="10.5" r="0.5" fill="currentColor" />
-                <circle cx="8.5" cy="7.5" r="0.5" fill="currentColor" />
-                <circle cx="6.5" cy="12.5" r="0.5" fill="currentColor" />
-                <path
-                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"
-                />
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
               </svg>
             </span>
 
             <h3>{{ service.title }}</h3>
             <p>{{ service.description }}</p>
-
-            <div>
-              <span v-for="tag in service.tags" :key="tag" class="tag">{{ tag }}</span>
-            </div>
           </article>
+        </div>
+      </div>
+
+      <div class="programs-block" v-reveal="200">
+        <p class="hand">manejo de programas ✳</p>
+        <div class="d-flex flex-wrap">
+          <span v-for="program in programs" :key="program" class="skill-chip">
+            {{ program }}
+          </span>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.programs-block {
+  margin-top: 3.5rem;
+}
+</style>

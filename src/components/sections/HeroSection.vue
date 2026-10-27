@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { site } from '../../data/site'
-import { img } from '../../utils/assets'
 import WaveDivider from '../layout/WaveDivider.vue'
 
 const marqueeItems = [
   'Fotografía',
-  'Producción audiovisual',
-  'Edición y postproducción',
-  'Dirección de arte',
+  'Audiovisual',
+  'Diseño',
+  'Productora Multimedia',
   'Retrato',
   'Video marca',
 ]
@@ -19,34 +18,6 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
 
 <template>
   <section id="inicio" class="section section-hero">
-    <!-- Aperturas flotantes decorativas -->
-    <svg class="aperture-float a1" viewBox="0 0 100 100" aria-hidden="true">
-      <g fill="currentColor">
-        <path d="M50 50 L86 44 L82 78 Z" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(45 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(90 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(135 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(180 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(225 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(270 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(315 50 50)" />
-      </g>
-      <circle cx="50" cy="50" r="14" fill="none" stroke="currentColor" stroke-width="4" />
-    </svg>
-    <svg class="aperture-float a2" viewBox="0 0 100 100" aria-hidden="true">
-      <g fill="currentColor">
-        <path d="M50 50 L86 44 L82 78 Z" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(45 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(90 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(135 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(180 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(225 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(270 50 50)" />
-        <path d="M50 50 L86 44 L82 78 Z" transform="rotate(315 50 50)" />
-      </g>
-      <circle cx="50" cy="50" r="14" fill="none" stroke="currentColor" stroke-width="4" />
-    </svg>
-
     <!-- Nubes a la deriva -->
     <div class="clouds" aria-hidden="true">
       <svg class="cloud c1" viewBox="0 0 200 70">
@@ -68,11 +39,10 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
 
     <div class="container">
       <div class="row g-5 align-items-center">
-        <div class="col-lg-7">
+        <div class="col-lg-6">
           <span class="hero-kicker">{{ site.hero.kicker }}</span>
           <h1 class="hero-title">
-            {{ site.hero.line1 }}<br />
-            <em>{{ site.hero.accent }}</em> {{ site.hero.line2 }}
+            {{ site.hero.line1 }} <em>{{ site.hero.accent }}</em> {{ site.hero.line2 }}
           </h1>
           <p class="hero-sub">{{ site.hero.subtitle }}</p>
 
@@ -87,24 +57,23 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
           </div>
         </div>
 
-        <div class="col-lg-5">
-          <figure class="hero-figure" v-reveal="150">
+        <div class="col-lg-6">
+          <figure class="hero-video-figure" v-reveal="150">
             <span class="hand-note" aria-hidden="true">¡hola! soy Sandy ✳</span>
-            <span class="tape" aria-hidden="true"></span>
-            <div class="hero-frame">
-              <span class="corner-frame" aria-hidden="true"></span>
-              <img
-                :src="img('images/portrait.svg')"
-                alt="Ilustración de Sandy Abarca, fotógrafa, tomando una foto en la playa"
-                width="800"
-                height="1000"
-              />
-              <figcaption class="frame-caption">
-                <span class="dot" aria-hidden="true"></span>
-                <span>{{ site.name }}</span>
-                <span>{{ site.role }}</span>
-              </figcaption>
+
+            <!-- Video de presentación (se activa cuando envíen el archivo) -->
+            <div class="video-card pattern-bg" aria-hidden="true">
+              <span class="video-rec">
+                <span class="rec-dot"></span>
+                REC
+              </span>
+              <span class="play-badge">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5.14v13.72L19 12 8 5.14z" />
+                </svg>
+              </span>
             </div>
+            <figcaption class="video-caption">{{ site.hero.videoNote }}</figcaption>
 
             <!-- Diafragma giratorio -->
             <div class="hero-stamp" aria-hidden="true">

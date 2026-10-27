@@ -32,7 +32,7 @@ import retrato from '../../assets/images/foto retrato.png'
               :src="retrato"
               alt="Fotografía de Sandy Abarca"
               width="800"
-              height="1000"
+              height="600"
               loading="lazy"
             />
             <figcaption>{{ site.about.figureCaption }}</figcaption>

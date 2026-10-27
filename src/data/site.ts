@@ -19,14 +19,14 @@ export const site = {
       'Soy Productora Multimedia, mi objetivo es capturar tu esencia y darle vida.',
     primaryCta: { label: 'Ver proyectos', href: '#proyectos' },
     secondaryCta: { label: 'Contáctame', href: '#contacto' },
-    videoNote: 'Video de presentación · próximamente',
+    videoNote: '',
   },
 
   about: {
     kicker: 'Sobre mí',
     headingLine1: 'Hola, soy',
     headingAccent: 'Sandy',
-    handNote: 'fotografía · retrato ✳',
+    handNote: '',
     paragraphs: [
       'Soy Sandy Abarca, Productora Multimedia, Estudiante de Ciencias de la Comunicación en la Universidad Don Bosco, apasionada por el mundo audiovisual, la fotografía y el diseño. Me dedico a transformar ideas en historias visuales con identidad, cuidando cada detalle detrás de la lente.',
     ],

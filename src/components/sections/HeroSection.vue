@@ -42,7 +42,7 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
       <div class="row g-5 align-items-center">
         <div class="col-lg-6">
           <span class="hero-kicker">{{ site.hero.kicker }}</span>
-
+          <br>  
           <!-- Logo sobre fondo oceánico con patrón -->
           <div class="hero-logo-card pattern-bg" v-reveal="80">
             <img class="hero-logo" :src="logoUrl" alt="Logo de Sandy Abarca" />

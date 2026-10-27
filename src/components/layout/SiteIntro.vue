@@ -10,32 +10,21 @@ let timerHide = 0
 
 onMounted(() => {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  let played = false
-  try {
-    played = sessionStorage.getItem('sandy-intro') === '1'
-  } catch {
-    /* sin sessionStorage */
-  }
 
-  // Sin intro si el usuario prefiere menos movimiento o ya la vio en esta sesión
-  if (reduced || played) {
+  // Sin intro solo si el usuario prefiere menos movimiento
+  if (reduced) {
     visible.value = false
     return
   }
 
-  try {
-    sessionStorage.setItem('sandy-intro', '1')
-  } catch {
-    /* sin sessionStorage */
-  }
-
+  // Se reproduce en cada carga y recarga de la página (~2 s en total)
   timerLeave = window.setTimeout(() => {
     leaving.value = true
-  }, 1150)
+  }, 1600)
 
   timerHide = window.setTimeout(() => {
     visible.value = false
-  }, 1650)
+  }, 2100)
 })
 
 onUnmounted(() => {
@@ -150,21 +139,21 @@ onUnmounted(() => {
   width: 100%;
   height: 48vh;
   transform: translateY(135%);
-  animation: wave-rise 1.05s cubic-bezier(0.45, 0.05, 0.35, 1) forwards;
+  animation: wave-rise 1.25s cubic-bezier(0.45, 0.05, 0.35, 1) forwards;
 }
 
 .intro-waves .wave.w1 {
-  animation-delay: 0.12s;
+  animation-delay: 0.15s;
   opacity: 0.55;
 }
 
 .intro-waves .wave.w2 {
-  animation-delay: 0.3s;
+  animation-delay: 0.38s;
   opacity: 0.8;
 }
 
 .intro-waves .wave.w3 {
-  animation-delay: 0.5s;
+  animation-delay: 0.62s;
 }
 
 @keyframes wave-rise {

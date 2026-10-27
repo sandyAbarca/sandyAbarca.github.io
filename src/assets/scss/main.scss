@@ -1726,19 +1726,19 @@ a.info-card:hover {
 }
 
 .enter-1 {
-  animation-delay: 0.3s;
+  animation-delay: 1.5s;
 }
 
 .enter-2 {
-  animation-delay: 0.5s;
+  animation-delay: 1.65s;
 }
 
 .enter-3 {
-  animation-delay: 0.7s;
+  animation-delay: 1.8s;
 }
 
 .enter-4 {
-  animation-delay: 0.9s;
+  animation-delay: 1.95s;
 }
 
 @keyframes enter-up {
@@ -1833,6 +1833,7 @@ a.info-card:hover {
   *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
   }
 }
 

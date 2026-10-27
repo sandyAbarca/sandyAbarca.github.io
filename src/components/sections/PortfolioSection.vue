@@ -32,7 +32,7 @@ const mediaCards = computed(() => mainProjects.filter((p) => p.kind !== 'carouse
         <div
           v-for="(project, i) in mediaCards"
           :key="project.id"
-          class="col-md-4"
+          class="col-md-6"
           v-reveal="140 + i * 90"
         >
           <ProjectCard :project="project" />

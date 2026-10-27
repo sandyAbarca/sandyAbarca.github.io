@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import type { Project } from '../../data/projects'
 
 const props = defineProps<{ project: Project }>()
@@ -7,13 +7,53 @@ const props = defineProps<{ project: Project }>()
 const slides = computed(() => props.project.slides ?? [])
 const index = ref(0)
 
-function prev() {
-  index.value = (index.value - 1 + slides.value.length) % slides.value.length
-}
+const AUTOPLAY_MS = 4000
+let timer: number | undefined
 
 function next() {
   index.value = (index.value + 1) % slides.value.length
 }
+
+function prev() {
+  index.value = (index.value - 1 + slides.value.length) % slides.value.length
+}
+
+function goTo(i: number) {
+  index.value = i
+  restart()
+}
+
+function startAutoplay() {
+  if (slides.value.length < 2) return
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  stopAutoplay()
+  timer = window.setInterval(next, AUTOPLAY_MS)
+}
+
+function stopAutoplay() {
+  if (timer) {
+    clearInterval(timer)
+    timer = undefined
+  }
+}
+
+function restart() {
+  stopAutoplay()
+  startAutoplay()
+}
+
+function manualPrev() {
+  prev()
+  restart()
+}
+
+function manualNext() {
+  next()
+  restart()
+}
+
+onMounted(startAutoplay)
+onUnmounted(stopAutoplay)
 
 // Deslizar con el dedo en móvil
 let startX = 0
@@ -22,14 +62,16 @@ function onTouchStart(e: TouchEvent) {
 }
 function onTouchEnd(e: TouchEvent) {
   const dx = e.changedTouches[0].clientX - startX
-  if (dx > 45) prev()
-  else if (dx < -45) next()
+  if (dx > 45) manualPrev()
+  else if (dx < -45) manualNext()
 }
 </script>
 
 <template>
   <div
     class="media-carousel"
+    @mouseenter="stopAutoplay"
+    @mouseleave="startAutoplay"
     @touchstart.passive="onTouchStart"
     @touchend.passive="onTouchEnd"
   >
@@ -69,10 +111,10 @@ function onTouchEnd(e: TouchEvent) {
 
     <span class="slide-count">{{ index + 1 }}/{{ slides.length }}</span>
 
-    <button class="carousel-btn prev" type="button" aria-label="Foto anterior" @click="prev">
+    <button class="carousel-btn prev" type="button" aria-label="Foto anterior" @click="manualPrev">
       ‹
     </button>
-    <button class="carousel-btn next" type="button" aria-label="Foto siguiente" @click="next">
+    <button class="carousel-btn next" type="button" aria-label="Foto siguiente" @click="manualNext">
       ›
     </button>
 
@@ -84,7 +126,7 @@ function onTouchEnd(e: TouchEvent) {
         class="dot"
         :class="{ 'is-active': i === index }"
         :aria-label="`Ir a ${slide.label}`"
-        @click="index = i"
+        @click="goTo(i)"
       ></button>
     </div>
   </div>

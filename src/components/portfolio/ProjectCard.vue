@@ -50,6 +50,16 @@ const usesPlayer = computed(() =>
       </h3>
       <p>{{ project.description }}</p>
       <p v-if="project.role" class="project-role">Rol · {{ project.role }}</p>
+      <a
+        v-if="project.externalUrl"
+        class="btn-outline project-link"
+        :href="project.externalUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        :aria-label="`${project.externalLabel ?? 'Ver más'} (se abre en una pestaña nueva)`"
+      >
+        {{ project.externalLabel ?? 'Ver más' }} <span aria-hidden="true">↗</span>
+      </a>
     </div>
   </article>
 </template>

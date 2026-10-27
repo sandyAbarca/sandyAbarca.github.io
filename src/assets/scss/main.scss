@@ -535,6 +535,26 @@ img {
   background: var(--sun);
 }
 
+/* Tarjeta del logo en el inicio */
+.hero-logo-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 1.6rem;
+  padding: 2.4rem 2.6rem;
+  border-radius: 1.8rem;
+  background: linear-gradient(160deg, var(--ocean) 0%, #0b2c4a 100%);
+  border: 1px solid rgba(255, 242, 187, 0.3);
+  box-shadow: var(--shadow);
+}
+
+.hero-logo {
+  display: block;
+  height: clamp(64px, 11vw, 116px);
+  width: auto;
+  max-width: 100%;
+}
+
 .hero-title {
   font-weight: 500;
   font-size: clamp(3rem, 8.2vw, 6.6rem);
@@ -1177,6 +1197,14 @@ img {
   color: var(--muted);
   border-top: 1px dashed var(--line);
   padding-top: 0.7rem;
+}
+
+/* Botón para ver el proyecto en su página */
+.project-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.9rem;
 }
 
 /* Ajustes de formato según tipo de proyecto */

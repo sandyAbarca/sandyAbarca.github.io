@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { site } from '../../data/site'
 import WaveDivider from '../layout/WaveDivider.vue'
+import logoUrl from '../../assets/images/Logo.png'
 
 const marqueeItems = [
   'Fotografía',
@@ -41,9 +42,12 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
       <div class="row g-5 align-items-center">
         <div class="col-lg-6">
           <span class="hero-kicker">{{ site.hero.kicker }}</span>
-          <h1 class="hero-title">
-            {{ site.hero.line1 }} <em>{{ site.hero.accent }}</em> {{ site.hero.line2 }}
-          </h1>
+
+          <!-- Logo sobre fondo oceánico con patrón -->
+          <div class="hero-logo-card pattern-bg" v-reveal="80">
+            <img class="hero-logo" :src="logoUrl" alt="Logo de Sandy Abarca" />
+          </div>
+
           <p class="hero-sub">{{ site.hero.subtitle }}</p>
 
           <div class="d-flex flex-wrap gap-3">
@@ -110,7 +114,7 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
                   fill="#0f3c65"
                 >
                   <textPath href="#stamp-circle" textLength="276">
-                    FOTOGRAFÍA ✳ LUZ ✳ MAR ✳ 2026
+                    SANDY ABARCA ✳ PRODUCTORA MULTIMEDIA ✳ 2026
                   </textPath>
                 </text>
                 <path

@@ -41,6 +41,10 @@ export interface Project {
   embedUrl?: string
   /** YouTube: ID del video */
   embedId?: string
+  /** Página externa para ver el proyecto completo */
+  externalUrl?: string
+  /** Texto del botón externo */
+  externalLabel?: string
 }
 
 /**
@@ -87,14 +91,6 @@ export const mainProjects: Project[] = [
   },
   {
     id: 4,
-    title: 'Monster Energy — Video',
-    kind: 'video',
-    category: 'Audiovisual',
-    description: 'Pieza audiovisual complementaria de la marca.',
-    comingSoon: true,
-  },
-  {
-    id: 5,
     title: 'Fender E-Commerce',
     kind: 'design',
     category: 'Diseño',
@@ -109,16 +105,18 @@ export const mainProjects: Project[] = [
  */
 export const otherProjects: Project[] = [
   {
-    id: 6,
+    id: 5,
     title: 'Cortometraje',
     kind: 'drive',
     category: 'Audiovisual',
     description: 'Cortometraje académico.',
     role: 'Cámara, Directora Musical y CM',
     embedUrl: 'https://drive.google.com/file/d/1ZHlSs61e-jrxRQClfLIuheq3fs30Kvkq/preview',
+    externalUrl: 'https://drive.google.com/file/d/1ZHlSs61e-jrxRQClfLIuheq3fs30Kvkq/view',
+    externalLabel: 'Ver en Drive',
   },
   {
-    id: 7,
+    id: 6,
     title: 'Doblaje de Voz — Los Increíbles',
     kind: 'youtube',
     category: 'Audio',
@@ -126,14 +124,19 @@ export const otherProjects: Project[] = [
     role: 'Voz de Edna Moda y Edición',
     embedId: 'mfoXyCzwbvs',
     cover: 'https://i.ytimg.com/vi/mfoXyCzwbvs/hqdefault.jpg',
+    externalUrl: 'https://www.youtube.com/watch?v=mfoXyCzwbvs',
+    externalLabel: 'Ver en YouTube',
   },
   {
-    id: 8,
+    id: 7,
     title: 'Demo de Voz',
     kind: 'soundcloud',
     category: 'Audio',
     description: 'Demo de voz para locución y doblaje.',
     embedUrl:
       'https://soundcloud.com/sandy-abarca-303840986/demo-de-voz-sandy-abarca-mp3',
+    externalUrl:
+      'https://soundcloud.com/sandy-abarca-303840986/demo-de-voz-sandy-abarca-mp3?ref=clipboard&p=i&c=1&si=3E2D986950AF49F0869C08D5D5999BA8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+    externalLabel: 'Ver en SoundCloud',
   },
 ]

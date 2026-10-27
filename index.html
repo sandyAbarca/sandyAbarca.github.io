@@ -11,6 +11,14 @@
     />
     <title>Sandy Abarca — Productora Multimedia</title>
 
+    <!-- Evita el parpadeo blanco al cargar en modo oscuro -->
+    <script>
+      try {
+        var t = localStorage.getItem('sandy-theme')
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark')
+      } catch (e) {}
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

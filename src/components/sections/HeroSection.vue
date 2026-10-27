@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { site } from '../../data/site'
 import WaveDivider from '../layout/WaveDivider.vue'
 import logoUrl from '../../assets/images/Logo.png'
@@ -15,12 +15,39 @@ const marqueeItems = [
 
 // Contenido duplicado para que la cinta se mueva sin cortes
 const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
+
+// Parallax de nubes y diafragma al hacer scroll
+const cloudsEl = ref<HTMLElement | null>(null)
+const stampEl = ref<HTMLElement | null>(null)
+let raf = 0
+let reduced = false
+
+function onScroll() {
+  cancelAnimationFrame(raf)
+  raf = requestAnimationFrame(() => {
+    const y = window.scrollY
+    if (cloudsEl.value) cloudsEl.value.style.transform = `translateY(${y * 0.18}px)`
+    if (stampEl.value) stampEl.value.style.transform = `translateY(${y * 0.32}px)`
+  })
+}
+
+onMounted(() => {
+  reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (!reduced) {
+    window.addEventListener('scroll', onScroll, { passive: true })
+  }
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+  cancelAnimationFrame(raf)
+})
 </script>
 
 <template>
   <section id="inicio" class="section section-hero">
-    <!-- Nubes a la deriva -->
-    <div class="clouds" aria-hidden="true">
+    <!-- Nubes a la deriva (con parallax) -->
+    <div class="clouds" ref="cloudsEl" aria-hidden="true">
       <svg class="cloud c1" viewBox="0 0 200 70">
         <path
           d="M35 55 a22 22 0 0 1 0-44 a28 28 0 0 1 54-9 a20 20 0 0 1 33 11 a22 22 0 0 1 0 42 Z"
@@ -41,16 +68,17 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
     <div class="container">
       <div class="row g-5 align-items-center">
         <div class="col-lg-6">
-          <span class="hero-kicker">{{ site.hero.kicker }}</span>
-          <br>  
+          <span class="hero-kicker enter enter-1">{{ site.hero.kicker }}</span>
+          <br>
+
           <!-- Logo sobre fondo oceánico con patrón -->
-          <div class="hero-logo-card pattern-bg" v-reveal="80">
+          <div class="hero-logo-card pattern-bg enter enter-2">
             <img class="hero-logo" :src="logoUrl" alt="Logo de Sandy Abarca" />
           </div>
 
-          <p class="hero-sub">{{ site.hero.subtitle }}</p>
+          <p class="hero-sub enter enter-3">{{ site.hero.subtitle }}</p>
 
-          <div class="d-flex flex-wrap gap-3">
+          <div class="d-flex flex-wrap gap-3 enter enter-4">
             <a class="btn-solid" :href="site.hero.primaryCta.href">
               {{ site.hero.primaryCta.label }}
               <span aria-hidden="true">↓</span>
@@ -79,8 +107,9 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
             </div>
             <figcaption class="video-caption">{{ site.hero.videoNote }}</figcaption>
 
-            <!-- Diafragma giratorio -->
-            <div class="hero-stamp" aria-hidden="true">
+            <!-- Diafragma giratorio (con parallax) -->
+            <div class="hero-stamp-wrap" ref="stampEl">
+              <div class="hero-stamp" aria-hidden="true">
               <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <path
@@ -122,6 +151,7 @@ const marqueeLoop = computed(() => [...marqueeItems, ...marqueeItems])
                   fill="#fff2bb"
                 />
               </svg>
+              </div>
             </div>
           </figure>
         </div>

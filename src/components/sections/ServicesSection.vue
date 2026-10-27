@@ -21,7 +21,7 @@ import { programs, services } from '../../data/services'
           class="col-md-4"
           v-reveal="100 + i * 90"
         >
-          <article class="service-card">
+          <article class="service-card" v-glow v-tilt>
             <span class="num" aria-hidden="true">0{{ service.id }}</span>
 
             <span class="service-icon" aria-hidden="true">

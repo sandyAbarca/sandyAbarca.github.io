@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import SiteIntro from './components/layout/SiteIntro.vue'
+import ScrollProgress from './components/layout/ScrollProgress.vue'
+import CursorGlow from './components/layout/CursorGlow.vue'
 import SiteNavbar from './components/layout/SiteNavbar.vue'
 import SiteFooter from './components/layout/SiteFooter.vue'
 import HeroSection from './components/sections/HeroSection.vue'
@@ -10,6 +13,9 @@ import ContactSection from './components/sections/ContactSection.vue'
 </script>
 
 <template>
+  <SiteIntro />
+  <ScrollProgress />
+  <CursorGlow />
   <SiteNavbar />
   <main>
     <HeroSection />

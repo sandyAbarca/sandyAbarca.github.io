@@ -13,7 +13,7 @@ const usesPlayer = computed(() =>
 </script>
 
 <template>
-  <article class="project-card">
+  <article class="project-card" v-glow v-tilt>
     <div class="project-media" :class="`is-${project.kind}`">
       <MediaCarousel v-if="isCarousel" :project="project" />
       <HoverPlayer v-else-if="usesPlayer" :project="project" />

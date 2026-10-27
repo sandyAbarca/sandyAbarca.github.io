@@ -35,6 +35,11 @@
   --accent-text: var(--ocean);
   --shadow: 0 24px 60px -30px rgba(15, 60, 101, 0.35);
   --tape: rgba(230, 209, 131, 0.85);
+
+  /* Neumorfismo */
+  --neu-dark: rgba(196, 165, 105, 0.4);
+  --neu-light: rgba(255, 255, 255, 0.95);
+  --neu-border: rgba(255, 255, 255, 0.65);
 }
 
 /* ---------- Modo oscuro: "playa de noche" ---------- */
@@ -54,6 +59,11 @@
   --sky-deep: #9fd2ee;
   --sand: #fff2bb;
   --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.65);
+
+  /* Neumorfismo nocturno */
+  --neu-dark: rgba(0, 0, 0, 0.55);
+  --neu-light: rgba(120, 160, 200, 0.08);
+  --neu-border: rgba(120, 192, 230, 0.12);
 }
 
 /* ---------- Base ---------- */
@@ -131,6 +141,45 @@ img {
   overflow: clip;
 }
 
+/* Contenido por encima de los objetos decorativos */
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Posiciones de los objetos 3D flotantes */
+.floating-obj.is-hero-camera {
+  left: 4%;
+  bottom: 8rem;
+  width: 118px;
+}
+
+.floating-obj.is-services-clapper {
+  right: 5%;
+  top: 7rem;
+  width: 104px;
+  opacity: 0.9;
+}
+
+.floating-obj.is-projects-light {
+  left: 4%;
+  top: 6.5rem;
+  width: 110px;
+}
+
+.floating-obj.is-cv-reel {
+  right: 6%;
+  bottom: 3.5rem;
+  width: 100px;
+}
+
+.floating-obj.is-contact-clapper {
+  left: 7%;
+  top: 7rem;
+  width: 74px;
+  opacity: 0.85;
+}
+
 .section-soft {
   background: var(--bg-soft);
   transition: background-color 0.4s ease;
@@ -149,11 +198,15 @@ img {
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--ocean);
-  background: var(--sun);
-  border-radius: 0.6rem;
-  padding: 0.15rem 0.7rem;
+  background: radial-gradient(circle at 32% 28%, #ffd35c, var(--sun) 60%, #f59d0e);
+  border-radius: 0.7rem;
+  padding: 0.18rem 0.7rem;
   min-width: 2.6rem;
   text-align: center;
+  box-shadow:
+    inset 0 3px 5px rgba(255, 255, 255, 0.5),
+    inset 0 -4px 7px rgba(232, 147, 10, 0.45),
+    0 8px 14px -8px rgba(232, 147, 10, 0.5);
 }
 
 .section-head .kicker {
@@ -441,7 +494,9 @@ img {
   right: 0;
   left: 0;
   z-index: 999;
-  background: var(--ocean);
+  background: rgba(11, 44, 74, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 242, 187, 0.25);
   padding: 6rem 1.5rem 2rem;
   box-shadow: var(--shadow);
@@ -556,7 +611,7 @@ img {
   background: var(--sun);
 }
 
-/* Tarjeta del logo en el inicio */
+/* Tarjeta del logo en el inicio (vidrio esmerilado) */
 .hero-logo-card {
   display: inline-flex;
   align-items: center;
@@ -564,9 +619,11 @@ img {
   margin: 1.5rem 0 1.6rem;
   padding: 2.4rem 2.6rem;
   border-radius: 1.8rem;
-  background: linear-gradient(160deg, var(--ocean) 0%, #0b2c4a 100%);
+  background: linear-gradient(160deg, rgba(15, 60, 101, 0.88), rgba(11, 44, 74, 0.82));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 242, 187, 0.3);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 242, 187, 0.18);
 }
 
 .hero-logo {
@@ -634,7 +691,9 @@ img {
   font-weight: 600;
   letter-spacing: 0.18em;
   color: var(--sand);
-  background: rgba(11, 44, 74, 0.6);
+  background: rgba(11, 44, 74, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 242, 187, 0.3);
   border-radius: 999px;
   padding: 0.35rem 0.9rem;
@@ -666,9 +725,12 @@ img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: var(--sun);
+  background: radial-gradient(circle at 32% 28%, #ffd35c, var(--sun) 55%, #f59d0e);
   color: var(--ocean);
-  box-shadow: 0 14px 34px -12px rgba(255, 172, 30, 0.7);
+  box-shadow:
+    inset 0 -7px 13px rgba(232, 147, 10, 0.45),
+    inset 0 7px 11px rgba(255, 255, 255, 0.55),
+    0 14px 34px -12px rgba(255, 172, 30, 0.7);
 }
 
 .play-badge svg {
@@ -876,16 +938,22 @@ img {
   position: relative;
   height: 100%;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--neu-border);
   border-radius: 1.5rem;
   padding: 2.1rem 2rem 1.9rem;
+  box-shadow:
+    9px 9px 22px var(--neu-dark),
+    -9px -9px 22px var(--neu-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow);
-  border-color: transparent;
+  border-color: var(--sun-deep);
+  box-shadow:
+    9px 9px 22px var(--neu-dark),
+    -9px -9px 22px var(--neu-light),
+    0 24px 50px -22px rgba(232, 147, 10, 0.4);
 }
 
 .service-card .num {
@@ -904,8 +972,12 @@ img {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 0.95rem;
-  background: var(--sun-soft);
-  color: var(--sun-deep);
+  background: radial-gradient(circle at 32% 28%, #ffd35c, var(--sun) 60%, #f59d0e);
+  color: var(--ocean);
+  box-shadow:
+    inset 0 5px 8px rgba(255, 255, 255, 0.45),
+    inset 0 -5px 10px rgba(232, 147, 10, 0.4),
+    0 8px 16px -8px rgba(232, 147, 10, 0.55);
   margin-bottom: 1.35rem;
   transition: transform 0.3s ease;
 }
@@ -1308,8 +1380,11 @@ img {
   right: 0.9rem;
   bottom: 0.9rem;
   z-index: 3;
-  background: rgba(11, 44, 74, 0.65);
+  background: rgba(11, 44, 74, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   color: var(--sand);
+  border: 1px solid rgba(255, 242, 187, 0.25);
   border-radius: 999px;
   padding: 0.25rem 0.7rem;
   font-size: 0.78rem;
@@ -1325,7 +1400,9 @@ img {
   height: 2.6rem;
   border-radius: 50%;
   border: 1px solid rgba(255, 242, 187, 0.5);
-  background: rgba(11, 44, 74, 0.55);
+  background: rgba(11, 44, 74, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   color: var(--sand);
   font-size: 1.5rem;
   line-height: 1;
@@ -1469,18 +1546,24 @@ img {
   align-items: center;
   gap: 1rem;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--neu-border);
   border-radius: 1.2rem;
   padding: 1.1rem 1.4rem;
   text-decoration: none;
   color: var(--ink);
+  box-shadow:
+    7px 7px 16px var(--neu-dark),
+    -7px -7px 16px var(--neu-light);
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 a.info-card:hover {
   transform: translateY(-3px);
   border-color: var(--sun-deep);
-  box-shadow: var(--shadow);
+  box-shadow:
+    7px 7px 16px var(--neu-dark),
+    -7px -7px 16px var(--neu-light),
+    0 18px 40px -18px rgba(232, 147, 10, 0.4);
 }
 
 .info-icon {
@@ -1508,10 +1591,12 @@ a.info-card:hover {
 
 .form-card {
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--neu-border);
   border-radius: 1.5rem;
   padding: 2.2rem;
-  box-shadow: var(--shadow);
+  box-shadow:
+    10px 10px 24px var(--neu-dark),
+    -10px -10px 24px var(--neu-light);
 }
 
 .form-hand {

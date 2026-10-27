@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { site } from '../../data/site'
+import FloatingObject from '../decor/FloatingObject.vue'
 
 const bubbles = [
   { left: '6%', size: 16, dur: 12, delay: 0, sun: false },
@@ -50,6 +51,9 @@ async function onSubmit() {
 
 <template>
   <section id="contacto" class="section section-soft section-contact">
+    <!-- Claqueta chica flotante -->
+    <FloatingObject type="clapper" class="is-contact-clapper" />
+
     <!-- Burbujas marinas -->
     <div class="bubbles" aria-hidden="true">
       <span

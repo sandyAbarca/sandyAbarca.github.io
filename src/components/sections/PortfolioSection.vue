@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { mainProjects, otherProjects } from '../../data/projects'
 import ProjectCard from '../portfolio/ProjectCard.vue'
 import WaveDivider from '../layout/WaveDivider.vue'
+import FloatingObject from '../decor/FloatingObject.vue'
 
 const carousels = computed(() => mainProjects.filter((p) => p.kind === 'carousel'))
 const mediaCards = computed(() => mainProjects.filter((p) => p.kind !== 'carousel'))
@@ -10,6 +11,9 @@ const mediaCards = computed(() => mainProjects.filter((p) => p.kind !== 'carouse
 
 <template>
   <section id="proyectos" class="section section-soft">
+    <!-- Luz de estudio flotante -->
+    <FloatingObject type="light" class="is-projects-light" />
+
     <div class="container">
       <div class="section-head" v-reveal>
         <span class="num">03</span>

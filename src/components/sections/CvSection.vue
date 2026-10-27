@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { site } from '../../data/site'
 import cvUrl from '../../assets/images/Curriculum Vitae CV Sandy Abarca (1).pdf'
+import FloatingObject from '../decor/FloatingObject.vue'
 </script>
 
 <template>
   <section id="hoja-de-vida" class="section">
+    <!-- Carrete flotante -->
+    <FloatingObject type="reel" class="is-cv-reel" />
+
     <div class="container">
       <div class="section-head" v-reveal>
         <span class="num">04</span>

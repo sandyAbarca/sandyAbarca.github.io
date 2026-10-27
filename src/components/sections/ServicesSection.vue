@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { programs, services } from '../../data/services'
+import FloatingObject from '../decor/FloatingObject.vue'
 </script>
 
 <template>
   <section id="servicios" class="section">
+    <!-- Claqueta flotante -->
+    <FloatingObject type="clapper" class="is-services-clapper" />
+
     <div class="container">
       <div class="section-head" v-reveal>
         <span class="num">02</span>

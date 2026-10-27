@@ -2,6 +2,7 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { site } from '../../data/site'
 import WaveDivider from '../layout/WaveDivider.vue'
+import FloatingObject from '../decor/FloatingObject.vue'
 import logoUrl from '../../assets/images/Logo.png'
 
 const marqueeItems = [
@@ -46,6 +47,9 @@ onUnmounted(() => {
 
 <template>
   <section id="inicio" class="section section-hero">
+    <!-- Cámara flotante -->
+    <FloatingObject type="camera" class="is-hero-camera" />
+
     <!-- Nubes a la deriva (con parallax) -->
     <div class="clouds" ref="cloudsEl" aria-hidden="true">
       <svg class="cloud c1" viewBox="0 0 200 70">
